@@ -11,9 +11,6 @@ export function CampaignMetrics() {
           
           {/* Section Header */}
           <div className="mb-12 md:mb-16 pb-4 border-b border-border-subtle">
-            <p className="font-label-caps text-label-caps uppercase tracking-[0.15em] text-tertiary">
-              01 / Verified Impact
-            </p>
             <h2 className="font-headline-md text-2xl sm:text-3xl md:text-headline-md text-on-surface mt-2">
               Campaign Scale &amp; Performance Metrics
             </h2>
@@ -88,10 +85,10 @@ export function CampaignMetrics() {
             </div>
 
             <div className="p-5 sm:p-6 border-r border-b border-border-subtle col-span-2 sm:col-span-1">
-              <p className="font-nav text-[11px] md:text-nav uppercase tracking-[0.12em] text-tertiary mb-1">
+              <p className="font-nav text-[11px] md:text-nav uppercase tracking-[0.12em] text-text-secondary mb-1">
                 Campaign ROAS
               </p>
-              <p className="font-headline-md text-2xl sm:text-3xl text-tertiary">
+              <p className="font-headline-md text-2xl sm:text-3xl text-on-surface">
                 <AnimatedCounter value={4.6} suffix="x" decimals={1} />
               </p>
             </div>

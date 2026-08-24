@@ -21,7 +21,7 @@ export function Navbar() {
   const navLinks = [
     { name: 'Home', path: '/' },
     { name: 'Films', path: '/films' },
-    { name: 'Events & Junkets', path: '/events' },
+    { name: 'Events', path: '/events' },
     { name: 'Documentaries', path: '/documentary' },
     { name: 'Branding', path: '/branding' },
     { name: 'Acknowledgments', path: '/acknowledgments' },
@@ -137,13 +137,24 @@ export function Navbar() {
               <div className="shrink-0 px-8 py-8 border-t border-border-subtle bg-surface-container/30">
                 <div className="flex flex-col gap-4">
                   <span className="font-label-caps text-[10px] uppercase tracking-widest text-text-secondary">Get in touch</span>
-                  <a href="mailto:hello@shubhammahajan.com" className="font-nav text-[12px] uppercase tracking-wider text-on-surface hover:text-tertiary transition-colors">
-                    hello@shubhammahajan.com
+                  <a href="mailto:spmahajan229@gmail.com" className="font-nav text-[12px] uppercase tracking-wider text-on-surface hover:text-tertiary transition-colors">
+                    spmahajan229@gmail.com
                   </a>
-                  <div className="flex items-center gap-6 mt-2">
-                    {['Instagram', 'LinkedIn', 'Vimeo'].map((social) => (
-                      <a key={social} href="#" className="font-label-caps text-[10px] text-text-secondary hover:text-on-surface transition-colors uppercase tracking-wider">
-                        {social}
+                  <div className="flex items-center gap-4 mt-2 flex-wrap">
+                    {[
+                      { name: 'Instagram', url: 'https://www.instagram.com/shubhiedoobie/' },
+                      { name: 'LinkedIn', url: 'https://www.linkedin.com/in/shubham-mahajan-462b20254/' },
+                      { name: 'IMDb', url: 'https://www.imdb.com/name/nm15325237/' },
+                      { name: 'YouTube', url: 'https://www.youtube.com/@shubhiedoobie' },
+                    ].map((social) => (
+                      <a 
+                        key={social.name} 
+                        href={social.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        className="font-label-caps text-[10px] text-text-secondary hover:text-tertiary transition-colors uppercase tracking-wider"
+                      >
+                        {social.name} ↗
                       </a>
                     ))}
                   </div>

@@ -4,24 +4,20 @@ import Image from 'next/image'
 import { FadeIn } from '@/components/ui/FadeIn'
 
 const brandBtsImages = [
-  { src: '/images/branding/bts/dsc_0512.jpg', alt: 'Commercial Production Lighting & Camera Rig' },
-  { src: '/images/branding/bts/dsc_0657.jpg', alt: 'Directing High-Conversion Commercial Shoot' },
-  { src: '/images/branding/bts/dsc_0752.jpg', alt: 'Brand Storytelling On Set' },
-  { src: '/images/branding/bts/dsc_0862.jpg', alt: 'Studio Monitoring and Focus Pulling' },
-  { src: '/images/branding/bts/dsc_0957.jpg', alt: 'Cinematography Setup for D2C Brand' },
-  { src: '/images/branding/bts/dsc_0962.jpg', alt: 'Actor Direction and Set Staging' },
-  { src: '/images/branding/bts/dsc_0140.jpg', alt: 'On-Location Camera & Monitoring Rig' },
-  { src: '/images/branding/bts/dsc_0145.jpg', alt: 'Field Directing & Live Monitoring' },
-  { src: '/images/branding/bts/dsc_0152.jpg', alt: 'Cinematography & Natural Light Staging' },
-  { src: '/images/branding/bts/dsc_0329.jpg', alt: 'Commercial Production Talent & Crew Direction' },
-  { src: '/images/branding/bts/dsc_0460.jpg', alt: 'Studio Lighting Setup & Gaffer Operations' },
-  { src: '/images/branding/bts/dsc_0488.jpg', alt: 'Portrait Cinematography Setup' },
-  { src: '/images/branding/bts/img_7758.jpg', alt: 'Production Management & Creative Direction' },
-  { src: '/images/branding/bts/img_7811.jpg', alt: 'Studio Frame Composition and Framing' },
-  { src: '/images/branding/bts/img_7978.jpg', alt: 'Commercial Sound and Camera Department' },
-  { src: '/images/branding/bts/oi7a8967.jpg', alt: 'Brand Film Production Stage' },
-  { src: '/images/branding/bts/oi7a9326.jpg', alt: 'Technical Camera Rigging on Location' },
-  { src: '/images/branding/bts/oi7a9421.jpg', alt: 'Studio Lighting Arrangement' },
+  { src: '/images/branding/bts/IMG_1663.PNG', alt: 'GlobalBees Brand Commercial BTS' },
+  { src: '/images/branding/bts/IMG_1665.PNG', alt: 'Studio Directing & Production Monitoring' },
+  { src: '/images/branding/bts/IMG_1666.PNG', alt: 'Commercial Campaign Setup' },
+  { src: '/images/branding/bts/IMG_1667.PNG', alt: 'On Set Brand Film Shoot' },
+  { src: '/images/branding/bts/IMG_1668.PNG', alt: 'Talent & Crew Direction' },
+  { src: '/images/branding/bts/IMG_1670.PNG', alt: 'Creative Directing Session' },
+  { src: '/images/branding/bts/IMG_1673.PNG', alt: 'Studio Lighting & Rigging' },
+  { src: '/images/branding/bts/IMG_1675.PNG', alt: 'Product Showcase & Commercial Cinematography' },
+  { src: '/images/branding/bts/IMG_1676.PNG', alt: 'On Set Filming & Frame Composition' },
+  { src: '/images/branding/bts/IMG_1677.JPG', alt: 'Brand Film Production Stage' },
+  { src: '/images/branding/bts/IMG_1678.JPG', alt: 'High-Conversion Commercial Set' },
+  { src: '/images/branding/bts/IMG_1679.JPG', alt: 'Field Directing & Live Monitoring' },
+  { src: '/images/branding/bts/IMG_1680.JPG', alt: 'Behind the Scenes Camera Operations' },
+  { src: '/images/branding/bts/IMG_1681.PNG', alt: 'Commercial Production Wrap' },
 ]
 
 export function BrandBtsGrid() {
@@ -31,20 +27,10 @@ export function BrandBtsGrid() {
         
         {/* Section Header */}
         <FadeIn>
-          <div className="mb-12 md:mb-16 flex flex-col md:flex-row md:items-end justify-between gap-6">
-            <div>
-              <span className="font-label-caps text-label-caps uppercase tracking-[0.15em] text-tertiary mb-3 block">
-                04 / Behind the Scenes
-              </span>
-              <h2 className="font-headline-lg text-display-mobile md:text-headline-lg text-on-surface">
-                On Set &amp; In Production
-              </h2>
-            </div>
-            <div className="text-on-surface-variant max-w-md text-sm md:text-base font-body">
-              <p>
-                Behind the camera across commercial sets, studio setups, lighting rigs, and creative directing sessions for GlobalBees and premier brand campaigns.
-              </p>
-            </div>
+          <div className="mb-12 md:mb-16 flex justify-center text-center pb-6 border-b border-border-subtle">
+            <h2 className="font-headline-lg text-display-mobile md:text-headline-lg text-on-surface">
+              BTS
+            </h2>
           </div>
         </FadeIn>
 

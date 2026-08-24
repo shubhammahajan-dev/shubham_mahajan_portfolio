@@ -7,82 +7,75 @@ import { motion, AnimatePresence } from 'framer-motion'
 
 interface HeroSlide {
   id: string
-  tag: string
   title: string
   impact: string
-  description: string
   ctaText: string
   href: string
   image: string
+  mobileImage?: string
   imageAlt: string
 }
 
 const slides: HeroSlide[] = [
   {
     id: 'films',
-    tag: '01 / CINEMATIC NARRATIVES',
     title: 'Films & Direction',
-    impact: 'BFI London Screening · Directorial & Production Design Leadership',
-    description: 'Directorial leadership, world-building production design, and nuanced soundscapes for award-winning narrative short films.',
+    impact: 'BFI London Screening \u00b7 Technical Practice \u00b7 Filmmaking Disciplines',
     ctaText: 'Explore Films',
     href: '/films',
     image: '/images/films/hero.png',
+    mobileImage: '/images/home/mobile/IMG_0112.JPG',
     imageAlt: 'Cinematic film camera production set'
   },
   {
     id: 'branding',
-    tag: '02 / STRATEGY & IMPACT',
     title: 'Branding & Campaigns',
-    impact: '900M+ Organic Views · 45+ High-Conversion Commercials',
-    description: 'Translating cultural tension and audience psychology into high-retention commercial campaigns for GlobalBees and premier D2C brands.',
+    impact: 'Direction \u00b7 Production \u00b7 Execution',
     ctaText: 'View Brand Work',
     href: '/branding',
     image: '/images/branding/hero.png',
+    mobileImage: '/images/home/mobile/IMG_0114.JPG',
     imageAlt: 'High-end studio commercial production'
   },
   {
     id: 'events',
-    tag: '03 / LIVE ORCHESTRATION',
-    title: 'Events & Press Junkets',
-    impact: 'Global Theatrical Premieres · Hollywood Talent Orchestration',
-    description: 'High-stakes production, luxury hospitality, and press junket orchestration for global theatrical releases and top-tier talent.',
+    title: 'Events & Junkets',
+    impact: 'Culture \u00b7 Luxury \u00b7 Experiences',
     ctaText: 'Discover Events',
     href: '/events',
     image: '/images/events/hero.png',
+    mobileImage: '/images/home/mobile/IMG_0115.JPG',
     imageAlt: 'Theatrical red carpet and press junket orchestration'
   },
   {
     id: 'documentary',
-    tag: '04 / DOCUMENTARIES',
     title: 'Documentaries',
-    impact: 'BBC Doc HeART · Goa Sunsplash · Independent Subcultures',
-    description: 'Immersive non-fiction storytelling capturing grassroots music movements, subcultures, and raw human narratives with visceral truth.',
+    impact: 'BBC \u00b7 Interviews \u00b7 Guerrilla Filmmaking',
     ctaText: 'Explore Documentaries',
     href: '/documentary',
     image: '/images/documentary/hero.png',
+    mobileImage: '/images/home/mobile/IMG_0116.JPG',
     imageAlt: 'Documentary filmmaking and cultural movement cinematography'
   },
   {
     id: 'record',
-    tag: '05 / CREDENTIALS & METHOD',
-    title: 'The Record & Practice',
-    impact: 'UCA London Postgraduate · Endorsements by Vishal Bhardwaj & Hansal Mehta',
-    description: 'A structural engineering foundation fused with cinema craft, postgraduate training in London, and formal industry recognition.',
+    title: 'Record & Practice',
+    impact: 'Academics \u00b7 Experience \u00b7 Endorsements by Indian Filmmakers',
     ctaText: 'View The Record',
     href: '/acknowledgments',
     image: '/images/home/hero-landscape.jpg',
+    mobileImage: '/images/acknowledgments/shubham.png',
     imageAlt: 'Shubham Mahajan - Filmmaker & Creative Strategist'
   }
 ]
 
-const SLIDE_DURATION = 4000 // 4 seconds per slide
+const SLIDE_DURATION = 3000 // 3 seconds per slide as requested
 
 export function HeroCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(1) // 1 = next, -1 = prev
   const [isPaused, setIsPaused] = useState(false)
   const [progress, setProgress] = useState(0)
-  const timerRef = useRef<NodeJS.Timeout | null>(null)
   const touchStartX = useRef<number | null>(null)
 
   const goToSlide = useCallback((newIndex: number, newDirection?: number) => {
@@ -168,7 +161,7 @@ export function HeroCarousel() {
       transition: {
         x: { type: 'spring' as const, stiffness: 300, damping: 30, duration: 0.5 },
         opacity: { duration: 0.4 },
-        scale: { duration: 4, ease: 'easeOut' as const }
+        scale: { duration: 3, ease: 'easeOut' as const }
       }
     },
     exit: (dir: number) => ({
@@ -188,7 +181,7 @@ export function HeroCarousel() {
     center: {
       opacity: 1,
       y: 0,
-      transition: { duration: 0.4, delay: 0.15, ease: 'easeOut' as const }
+      transition: { duration: 0.4, delay: 0.1, ease: 'easeOut' as const }
     },
     exit: { opacity: 0, y: -15, transition: { duration: 0.25 } }
   }
@@ -214,21 +207,33 @@ export function HeroCarousel() {
             exit="exit"
             className="absolute inset-0 w-full h-full"
           >
+            {/* Desktop / Landscape Image */}
             <Image
               src={currentSlide.image}
               alt={currentSlide.imageAlt}
               fill
               priority
               sizes="100vw"
-              className="object-cover object-center"
+              className={`object-cover object-center ${currentSlide.mobileImage ? 'hidden md:block' : 'block'}`}
             />
+            {/* Mobile / Portrait Image */}
+            {currentSlide.mobileImage && (
+              <Image
+                src={currentSlide.mobileImage}
+                alt={currentSlide.imageAlt}
+                fill
+                priority
+                sizes="100vw"
+                className="object-cover object-center block md:hidden"
+              />
+            )}
           </motion.div>
         </AnimatePresence>
 
-        {/* Cinematic Scrims: Top for Navbar, Bottom for Hero Content */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-10" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-transparent z-10 pointer-events-none" />
-        <div className="absolute inset-0 bg-black/25 z-10 pointer-events-none" />
+        {/* Cinematic Scrims: Brighter images with subtle gradient readable text */}
+        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/40 to-transparent z-10" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/60 via-transparent to-transparent z-10 pointer-events-none" />
+        <div className="absolute inset-0 bg-black/10 z-10 pointer-events-none" />
       </div>
 
       {/* Main Content Overlay */}
@@ -242,27 +247,14 @@ export function HeroCarousel() {
             exit="exit"
             className="max-w-3xl"
           >
-            {/* Tag / Pillar Indicator */}
-            <div className="flex items-center gap-3 mb-3 md:mb-4">
-              <div className="w-1.5 h-1.5 bg-tertiary rounded-none" />
-              <span className="font-label-caps text-xs md:text-label-caps text-tertiary uppercase tracking-[0.15em] font-medium">
-                {currentSlide.tag}
-              </span>
-            </div>
-
             {/* Headline */}
-            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[56px] text-on-surface leading-[1.08] tracking-tight mb-4">
+            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-[56px] text-on-surface leading-[1.08] tracking-tight mb-3 md:mb-4">
               {currentSlide.title}
             </h1>
 
-            {/* Impact Subtitle */}
-            <p className="font-nav text-xs sm:text-sm md:text-nav uppercase tracking-[0.12em] text-[#E5C992] mb-4 md:mb-5 font-medium leading-relaxed">
+            {/* Subtitle */}
+            <p className="font-nav text-xs sm:text-sm md:text-nav uppercase tracking-[0.12em] text-[#E5C992] mb-6 md:mb-8 font-medium leading-relaxed">
               {currentSlide.impact}
-            </p>
-
-            {/* Description */}
-            <p className="font-body text-sm sm:text-base md:text-body text-on-surface-variant max-w-2xl leading-relaxed mb-6 md:mb-8 line-clamp-3 md:line-clamp-none">
-              {currentSlide.description}
             </p>
 
             {/* Direct CTA Link */}
@@ -284,7 +276,7 @@ export function HeroCarousel() {
         
         {/* Minimalist Dotted Page Indicators */}
         <div className="flex items-center gap-3.5 pointer-events-auto">
-          <div className="flex items-center gap-1.5">
+          <div className="flex items-center gap-2">
             {slides.map((slide, idx) => {
               const isActive = idx === currentIndex
               return (
@@ -297,14 +289,14 @@ export function HeroCarousel() {
                   <div
                     className={`relative overflow-hidden transition-all duration-300 rounded-none ${
                       isActive 
-                        ? 'w-5 sm:w-6 h-[2px] bg-white/15' 
-                        : 'w-1.5 h-[2px] bg-white/25 group-hover:bg-white/50'
+                        ? 'w-6 sm:w-8 h-[2.5px] bg-white/30' 
+                        : 'w-2 h-[2.5px] bg-white/40 group-hover:bg-white/70'
                     }`}
                   >
                     {/* Active progress fill */}
                     {isActive && (
                       <div 
-                        className="absolute left-0 top-0 bottom-0 bg-tertiary transition-all duration-75 ease-linear"
+                        className="absolute left-0 top-0 bottom-0 bg-[#E5C992] transition-all duration-75 ease-linear shadow-[0_0_8px_rgba(229,201,146,0.6)]"
                         style={{ width: `${progress}%` }}
                       />
                     )}
@@ -314,7 +306,7 @@ export function HeroCarousel() {
             })}
           </div>
 
-          <span className="font-label-caps text-[11px] text-text-secondary tracking-widest">
+          <span className="font-label-caps text-xs text-on-surface/90 tracking-widest font-medium">
             0{currentIndex + 1}&nbsp;/&nbsp;0{slides.length}
           </span>
         </div>

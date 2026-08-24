@@ -48,20 +48,10 @@ export function OperatingPrinciples() {
         
         {/* Section Header */}
         <FadeIn>
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 md:mb-20 gap-6">
-            <div>
-              <span className="font-label-caps text-label-caps uppercase tracking-[0.15em] text-tertiary mb-3 block">
-                Methodology &amp; Core Principles
-              </span>
-              <h2 className="font-headline-lg text-display-mobile md:text-headline-lg text-on-surface">
-                The Multidisciplinary Framework
-              </h2>
-            </div>
-            <div className="text-on-surface-variant max-w-md text-sm md:text-base font-body">
-              <p>
-                How disparate disciplines—engineering, cinema, movement, and luxury operations—converge into a unified, high-precision creative practice.
-              </p>
-            </div>
+          <div className="mb-16 md:mb-20 pb-6 border-b border-border-subtle">
+            <h2 className="font-headline-lg text-display-mobile md:text-headline-lg text-on-surface">
+              The Multidisciplinary Framework
+            </h2>
           </div>
         </FadeIn>
 

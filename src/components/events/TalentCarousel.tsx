@@ -3,17 +3,20 @@
 import { useState } from 'react'
 import Image from 'next/image'
 
-interface TalentItem {
+export interface TalentItem {
   name: string
   img: string
+  role?: string
+  fit?: 'cover' | 'contain'
 }
 
 interface TalentCarouselProps {
   items: TalentItem[]
   direction?: 'left-to-right' | 'right-to-left'
+  defaultBadge?: string
 }
 
-export function TalentCarousel({ items, direction = 'left-to-right' }: TalentCarouselProps) {
+export function TalentCarousel({ items, direction = 'left-to-right', defaultBadge = 'Talent Managed' }: TalentCarouselProps) {
   // Track active tapped item on mobile/touch
   const [activeTalent, setActiveTalent] = useState<string | null>(null)
   const [isPaused, setIsPaused] = useState(false)
@@ -21,8 +24,7 @@ export function TalentCarousel({ items, direction = 'left-to-right' }: TalentCar
   // Duplicate items array so the marquee can loop seamlessly
   const duplicatedItems = [...items, ...items]
 
-  // Calculate speed so all carousels move at the exact same physical pixels/sec
-  // ~3.5 seconds per card guarantees consistent luxury pacing across 5, 9, or 20 cards
+  // Calculate speed so all carousels move at consistent luxury pacing
   const durationSeconds = Math.max(items.length * 3.5, 14)
 
   const handleCardClick = (name: string) => {
@@ -66,8 +68,8 @@ export function TalentCarousel({ items, direction = 'left-to-right' }: TalentCar
                 sizes="(max-width: 768px) 200px, (max-width: 1024px) 266px, 300px"
                 className={`object-cover transition-all duration-500 ${
                   isActive 
-                    ? 'scale-105 grayscale-0 mix-blend-normal' 
-                    : 'grayscale md:group-hover:grayscale-0 mix-blend-luminosity md:group-hover:mix-blend-normal md:group-hover:scale-105'
+                    ? 'scale-105 grayscale-0 opacity-100' 
+                    : 'grayscale opacity-80 md:group-hover:grayscale-0 md:group-hover:opacity-100 md:group-hover:scale-105'
                 }`}
               />
 
@@ -78,7 +80,7 @@ export function TalentCarousel({ items, direction = 'left-to-right' }: TalentCar
                 }`}
               >
                 <span className="font-label-caps text-[10px] text-tertiary uppercase tracking-widest mb-1 block">
-                  Talent Managed
+                  {talent.role || defaultBadge}
                 </span>
                 <span className="font-nav text-[14px] md:text-[15px] uppercase tracking-wider text-on-surface font-medium">
                   {talent.name}

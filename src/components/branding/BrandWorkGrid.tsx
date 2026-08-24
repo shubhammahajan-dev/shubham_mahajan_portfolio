@@ -22,21 +22,10 @@ export function BrandWorkGrid() {
         
         {/* Section Header */}
         <FadeIn>
-          <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 md:mb-16 gap-6">
-            <div>
-              <span className="font-label-caps text-label-caps uppercase tracking-[0.15em] text-tertiary mb-3 block">
-                03 / Creative Works & Commercials
-              </span>
-              <h2 className="font-headline-lg text-display-mobile md:text-headline-lg text-on-surface">
-                Selected Campaigns & Direction
-              </h2>
-            </div>
-
-            <div className="text-on-surface-variant max-w-md text-sm md:text-base font-body">
-              <p>
-                A curated archive of commercial brand films, celebrity campaigns, and viral performance formats directed and strategized across D2C brands.
-              </p>
-            </div>
+          <div className="mb-12 md:mb-16 pb-6 border-b border-border-subtle">
+            <h2 className="font-headline-lg text-display-mobile md:text-headline-lg text-on-surface">
+              Campaigns &amp; Direction
+            </h2>
           </div>
         </FadeIn>
 
@@ -167,22 +156,7 @@ export function BrandWorkGrid() {
           })}
         </div>
 
-        {/* Global Playlist Direct Link */}
-        <FadeIn>
-          <div className="mt-16 pt-8 border-t border-border-subtle flex flex-col sm:flex-row items-center justify-between gap-4">
-            <p className="font-body text-xs md:text-sm text-text-secondary text-center sm:text-left">
-              Showing 45 commercial works, campaigns, and formats produced and directed by Shubham Mahajan.
-            </p>
-            <a
-              href="https://www.youtube.com/playlist?list=PLE-OX6F6FSWkaqhLJlFybfIPTNIrbXAwh"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="font-nav text-xs uppercase tracking-widest text-tertiary hover:text-on-surface transition-colors flex items-center gap-2 border-b border-tertiary pb-1"
-            >
-              View Complete YouTube Playlist ({brandWorkItems.length} Videos) ↗
-            </a>
-          </div>
-        </FadeIn>
+
 
       </div>
 

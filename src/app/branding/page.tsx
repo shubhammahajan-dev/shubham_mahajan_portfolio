@@ -27,14 +27,11 @@ export default function BrandingPage() {
         <div className="absolute inset-0 bg-black/25 z-0" />
 
         <div className="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          <p className="font-nav text-xs md:text-nav uppercase tracking-[0.15em] text-tertiary mb-4 md:mb-6 font-medium">
-            04 / Creative Strategy · Brand Marketing · Campaign Production
-          </p>
-          <h1 className="font-display text-4xl sm:text-5xl md:text-display text-on-surface max-w-4xl tracking-tight leading-[1.1]">
-            Storytelling that moves people &mdash; and business.
+          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[76px] leading-[1.05] text-on-surface uppercase tracking-tight mb-4">
+            Branding &amp; Marketing
           </h1>
-          <p className="font-body text-body text-on-surface-variant max-w-reading-max mt-4 md:mt-6 leading-relaxed">
-            Working directly with founders and leading multidisciplinary teams to craft narratives that drive measurable impact.
+          <p className="font-nav text-xs sm:text-sm md:text-nav uppercase tracking-[0.12em] text-[#E5C992] font-medium">
+            Campaigns &middot; Business &middot; Entrepreneurship
           </p>
         </div>
       </section>
@@ -44,7 +41,7 @@ export default function BrandingPage() {
       <CampaignMetrics />
 
 
-      {/* ======================= BRAND LEADERSHIP (GLOBALBEES) ======================= */}
+      {/* ======================= BRAND LEADERSHIP (FROM CONTENT TO COMMERCE) ======================= */}
       <BrandCaseStudy />
 
 
@@ -52,18 +49,11 @@ export default function BrandingPage() {
       <BrandWorkGrid />
 
 
-      {/* ======================= BEHIND THE SCENES (GLOBALBEES BTS) ======================= */}
-      <BrandBtsGrid />
-
-
       {/* ======================= CORE CAPABILITIES GRID ======================= */}
       <FadeIn>
         <section className="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-mobile md:py-24 border-t border-border-subtle">
           <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop mb-8">
             <div className="lg:col-span-3 mb-6 lg:mb-0">
-              <span className="font-label-caps text-label-caps uppercase tracking-[0.15em] text-tertiary mb-2 block">
-                05 / Scope
-              </span>
               <h3 className="font-headline-md text-2xl md:text-3xl text-on-surface mb-2">
                 Core Capabilities
               </h3>
@@ -98,10 +88,14 @@ export default function BrandingPage() {
       </FadeIn>
 
 
-      {/* ======================= CREATIVE PIPELINE (VERTICAL TABS) ======================= */}
+      {/* ======================= CREATIVE PIPELINE (METHODOLOGY TABS) ======================= */}
       <FadeIn>
         <CreativePipelineTabs />
       </FadeIn>
+
+
+      {/* ======================= BEHIND THE SCENES (BTS COLLAGE) ======================= */}
+      <BrandBtsGrid />
 
 
       {/* ======================= CTA SECTION ======================= */}

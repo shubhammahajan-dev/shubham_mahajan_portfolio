@@ -2,6 +2,33 @@ import Image from 'next/image'
 import { FadeIn } from '@/components/ui/FadeIn'
 import { VideoEmbed } from '@/components/ui/VideoEmbed'
 
+const curatedStills = [
+  '/images/documentary/stills/dsc_0140.jpg',
+  '/images/documentary/stills/dsc_0145.jpg',
+  '/images/documentary/stills/dsc_0152.jpg',
+  '/images/documentary/stills/dsc_0329.jpg',
+  '/images/documentary/stills/dsc_0460.jpg',
+  '/images/documentary/stills/dsc_0488.jpg',
+  '/images/documentary/stills/dsc_0512.jpg',
+  '/images/documentary/stills/dsc_0657.jpg',
+  '/images/documentary/stills/dsc_0752.jpg',
+  '/images/documentary/stills/dsc_0862.jpg',
+  '/images/documentary/stills/dsc_0957.jpg',
+  '/images/documentary/stills/dsc_0962.jpg',
+  '/images/documentary/stills/img_7758.jpg',
+  '/images/documentary/stills/img_7811.jpg',
+  '/images/documentary/stills/bts-01.jpg',
+  '/images/documentary/stills/bts-03.jpg',
+  '/images/documentary/stills/bts-04.jpg',
+  '/images/documentary/stills/bts-5.jpg',
+  '/images/documentary/stills/bts-07.jpg',
+  '/images/documentary/stills/bts-09.jpg',
+  '/images/documentary/stills/bts-10.jpg',
+  '/images/documentary/stills/bts-11.jpg',
+  '/images/documentary/stills/bts-14.jpg',
+  '/images/documentary/stills/bts-16.jpg',
+]
+
 export default function DocumentaryPage() {
   return (
     <div className="flex flex-col min-h-screen">
@@ -26,14 +53,11 @@ export default function DocumentaryPage() {
 
         <div className="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
           <div className="max-w-4xl">
-            <p className="font-nav text-xs md:text-nav uppercase tracking-[0.12em] text-tertiary mb-4 md:mb-6 font-medium">
-              Documentary Production · Cultural Observation · Unscripted Storytelling
-            </p>
-            <h1 className="font-display text-3xl sm:text-4xl md:text-5xl lg:text-display text-on-surface leading-[1.08] tracking-tight mb-6">
-              Observational cinema rooted in human truth.
+            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[76px] leading-[1.05] text-on-surface uppercase tracking-tight mb-4">
+              Documentaries
             </h1>
-            <p className="font-body text-sm sm:text-base md:text-body text-on-surface-variant max-w-reading-max opacity-90">
-              Documentary and non-fiction projects across institutional, cultural and music environments.
+            <p className="font-nav text-xs sm:text-sm md:text-nav uppercase tracking-[0.12em] text-[#E5C992] font-medium">
+              Realism &middot; Interviews &middot; Experiences
             </p>
           </div>
         </div>
@@ -46,15 +70,17 @@ export default function DocumentaryPage() {
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
               <div className="lg:col-span-4 mb-6 lg:mb-0">
-                <span className="font-label-caps text-label-caps text-text-secondary uppercase tracking-[0.15em] mb-4 block">01 / Overview</span>
-                <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-on-surface">The Observational Method</h2>
+                <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-on-surface">
+                  The Observational Method
+                </h2>
+                <div className="w-12 h-1 bg-tertiary mt-4" />
               </div>
               <div className="lg:col-span-8 lg:col-start-5 max-w-reading-max font-body text-body text-text-secondary flex flex-col gap-6">
                 <p className="leading-relaxed">
-                  Documentary filmmaking requires a different kind of discipline. It demands patience, acute observation, and the ability to find narrative structure within unscripted reality.
+                  Documentary filmmaking demands patience, acute observation, rigorous research, and the ability to find narrative within unscripted reality. My work spans productions with BBC producers, large-scale music and cultural festival documentaries, and independent observational projects. Across these, I take a journalistic, reality-first approach, understanding the subject, researching context, questioning assumptions, and allowing the story to emerge naturally.
                 </p>
                 <p className="leading-relaxed">
-                  My documentary work spans institutional productions for the BBC, large-scale music and cultural festival documentaries, and independent observational projects. Across all of them, the approach remains consistent: enter the environment with sensitivity, build trust with subjects, and let the truth of the situation guide the lens.
+                  I&apos;m particularly drawn to guerrilla-style filmmaking: working discreetly with real people in real environments, minimising the camera&apos;s presence so subjects remain natural and unselfconscious. But observation alone isn&apos;t enough; good documentary filmmaking also means asking uncomfortable questions, challenging what is presented, and pursuing what lies beneath the obvious story. The camera becomes a tool for access, investigation, and honest storytelling.
                 </p>
               </div>
             </div>
@@ -83,11 +109,11 @@ export default function DocumentaryPage() {
                 </div>
               </div>
 
-              <div className="lg:col-span-7 relative aspect-video border border-border-subtle p-2">
+              <div className="lg:col-span-7 relative aspect-video border border-border-subtle p-2 bg-surface-container-lowest">
                 <div className="w-full h-full border border-border-subtle overflow-hidden relative">
                   <Image 
                     src="/images/documentary/heART.jpeg" 
-                    alt="HeART Documentary Still" 
+                    alt="HeART BBC Documentary" 
                     fill 
                     sizes="(max-width: 1024px) 100vw, 60vw"
                     className="object-cover transition-all duration-700 ease-in-out hover:scale-105" 
@@ -132,7 +158,7 @@ export default function DocumentaryPage() {
                 </div>
               </div>
 
-              <div className="lg:col-span-7 relative aspect-video border border-border-subtle p-2">
+              <div className="lg:col-span-7 relative aspect-video border border-border-subtle p-2 bg-surface-container-lowest">
                 <div className="w-full h-full border border-border-subtle overflow-hidden relative">
                   <Image 
                     src="/images/documentary/goa-sunsplash-01.jpg" 
@@ -215,71 +241,22 @@ export default function DocumentaryPage() {
         <section className="w-full border-t border-border-subtle bg-surface-container-low py-section-desktop">
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12 md:mb-16 flex justify-between items-end border-b border-border-subtle pb-6">
             <h2 className="font-headline-md text-3xl md:text-[48px] text-on-surface">Curated Stills</h2>
-            <span className="font-label-caps text-xs md:text-label-caps text-text-secondary uppercase tracking-[0.15em]">Archive 001 &mdash; 005</span>
           </div>
 
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop flex flex-col gap-12 md:gap-16">
-            
-            {/* Row 1: 2-item split on desktop, responsive stack on mobile/tablet */}
-            <div className="grid grid-cols-1 lg:grid-cols-12 gap-gutter-desktop">
-              <div className="lg:col-span-8 flex flex-col gap-4 group">
-                <div className="aspect-video border border-border-subtle overflow-hidden bg-background relative">
+          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+              {curatedStills.map((img, idx) => (
+                <div key={idx} className="group aspect-[4/3] border border-border-subtle overflow-hidden bg-background relative">
                   <Image 
-                    src="/images/documentary/stills/dsc_0140.jpg" 
-                    alt="Aazad Awaaz Documentary Still" 
+                    src={img} 
+                    alt={`Documentary and observational still ${idx + 1}`} 
                     fill 
-                    sizes="(max-width: 1024px) 100vw, 66vw" 
-                    className="object-cover grayscale opacity-80 mix-blend-luminosity group-hover:mix-blend-normal group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out transform group-hover:scale-[1.02]" 
+                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw" 
+                    className="object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out transform group-hover:scale-105" 
                   />
-                </div>
-                <div className="border-t border-border-subtle pt-3 flex justify-between items-center">
-                  <span className="font-label-caps text-xs md:text-label-caps text-text-secondary uppercase tracking-[0.15em]">001 &mdash; Cultural Observational</span>
-                  <span className="font-caption text-caption text-outline">35mm</span>
-                </div>
-              </div>
-
-              <div className="lg:col-span-4 flex flex-col gap-4 group">
-                <div className="aspect-video lg:aspect-auto lg:h-[calc(100%-48px)] border border-border-subtle overflow-hidden bg-background relative">
-                  <Image 
-                    src="/images/documentary/stills/dsc_0145.jpg" 
-                    alt="Observational Portrait" 
-                    fill 
-                    sizes="(max-width: 1024px) 100vw, 33vw" 
-                    className="object-cover grayscale opacity-80 mix-blend-luminosity group-hover:mix-blend-normal group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out transform group-hover:scale-[1.02]" 
-                  />
-                </div>
-                <div className="border-t border-border-subtle pt-3 flex justify-between items-center">
-                  <span className="font-label-caps text-xs md:text-label-caps text-text-secondary uppercase tracking-[0.15em]">002 &mdash; Human Portrait</span>
-                  <span className="font-caption text-caption text-outline">50mm</span>
-                </div>
-              </div>
-            </div>
-
-            {/* Row 2: 3-column equal split on desktop & tablet, 1-col on mobile */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter-desktop">
-              {[
-                { num: '003', type: 'Subculture Gathering', lens: '24mm', img: '/images/documentary/stills/dsc_0152.jpg' },
-                { num: '004', type: 'Live Expression', lens: '85mm', img: '/images/documentary/stills/dsc_0329.jpg' },
-                { num: '005', type: 'Community & Dialogue', lens: '50mm', img: '/images/documentary/stills/dsc_0460.jpg' },
-              ].map((item) => (
-                <div key={item.num} className="flex flex-col gap-4 group">
-                  <div className="aspect-video border border-border-subtle overflow-hidden bg-background relative">
-                    <Image 
-                      src={item.img} 
-                      alt={item.type} 
-                      fill 
-                      sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw" 
-                      className="object-cover grayscale opacity-80 mix-blend-luminosity group-hover:mix-blend-normal group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out transform group-hover:scale-[1.02]" 
-                    />
-                  </div>
-                  <div className="border-t border-border-subtle pt-3 flex justify-between items-center">
-                    <span className="font-label-caps text-xs md:text-label-caps text-text-secondary uppercase tracking-[0.15em]">{item.num} &mdash; {item.type}</span>
-                    <span className="font-caption text-caption text-outline">{item.lens}</span>
-                  </div>
                 </div>
               ))}
             </div>
-
           </div>
         </section>
       </FadeIn>

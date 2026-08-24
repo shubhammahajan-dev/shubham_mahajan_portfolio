@@ -7,17 +7,12 @@ export function BrandCaseStudy() {
     <section className="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-section-mobile md:py-section-desktop">
       <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop">
         
-        {/* Left Column: Marker & Headline */}
+        {/* Left Column: Headline */}
         <div className="md:col-span-4 flex flex-col gap-4 mb-8 md:mb-0">
-          <span className="font-label-caps text-label-caps text-tertiary uppercase tracking-widest border-b border-border-subtle pb-4 w-max">
-            02 / Brand Leadership
-          </span>
-          <h2 className="font-headline-lg text-headline-lg text-on-surface mt-2">
-            Associate Director &mdash; GlobalBees
+          <h2 className="font-headline-lg text-headline-lg text-on-surface">
+            From Content to Commerce
           </h2>
-          <p className="font-nav text-nav uppercase tracking-[0.12em] text-text-secondary">
-            UrbanGabru & UrbanYog · Unicorn D2C Portfolio
-          </p>
+          <div className="w-12 h-1 bg-tertiary mt-2" />
         </div>
 
         {/* Right Column: Strategic Narrative & Dual Brand Showcase */}
@@ -26,10 +21,10 @@ export function BrandCaseStudy() {
           <FadeIn>
             <div className="font-body text-body text-on-surface-variant flex flex-col gap-6 text-base md:text-lg leading-relaxed">
               <p>
-                As Associate Director at GlobalBees, I led brand creative strategy and production across two key portfolio brands—<span className="text-on-surface font-medium">UrbanGabru</span> (Men&apos;s Grooming) and <span className="text-on-surface font-medium">UrbanYog</span> (Women&apos;s Personal Care).
+                As an Associate Director of the GlobalBees creative team, I led creative strategy, production, and studio operations across two key portfolio brands, UrbanGabru (Men’s Grooming) and UrbanYog (Women’s Personal Care). Leading a multidisciplinary 7-person team across ideation, scripting, production, post-production, and distribution, I built and executed content systems that scaled the brands’ digital presence, from short-form retention-led formats to multi-million-view celebrity commercials.
               </p>
               <p>
-                Leading a multidisciplinary 7-person team across creative ideation, scriptwriting, video production, post-supervision, and distribution, I transformed the brands&apos; digital architecture. We scaled the YouTube channel from zero to <span className="text-on-surface font-medium">500K+ subscribers in just 6–8 months</span>, architecting everything from short-form retention hooks to multi-million view celebrity commercials.
+                Alongside creative execution, I managed the operational and performance layer of the studio, developing KPI frameworks, Q4 and forecasting reports, production insights, performance reviews, and resource planning to regulate team output and align creative production with business goals. I also collaborated with the product design and marketing teams on discount strategies, packaging and label design, offline campaigns, and in-store retail displays and stands, extending the creative function beyond digital into the physical brand experience. I oversaw studio management, workflows, production pipelines, and cross-functional coordination, helping scale the YouTube channel from zero to 500K+ subscribers within 6–8 months while maintaining a data-led approach to creative decision-making.
               </p>
             </div>
           </FadeIn>
@@ -43,13 +38,13 @@ export function BrandCaseStudy() {
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <span className="font-label-caps text-[11px] uppercase tracking-widest text-tertiary">
-                      Flagship Brand
+                      UrbanGabru
                     </span>
                     <span className="font-label-caps text-[11px] uppercase tracking-widest text-text-secondary">
                       Men&apos;s Care
                     </span>
                   </div>
-                  <h3 className="font-headline-md text-2xl text-on-surface mb-3">UrbanGabru</h3>
+                  <h3 className="font-headline-md text-2xl text-on-surface mb-3">Associate Director</h3>
                   <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
                     Directed national commercial campaigns featuring Indian cricketer <strong className="text-on-surface">Suryakumar Yadav</strong>, created high-converting performance ads driving <strong className="text-on-surface">₹86 Crore in campaign revenue</strong>, and spearheaded viral lifestyle content.
                   </p>
@@ -67,13 +62,13 @@ export function BrandCaseStudy() {
                 <div>
                   <div className="flex items-center justify-between mb-4">
                     <span className="font-label-caps text-[11px] uppercase tracking-widest text-tertiary">
-                      Category Innovation
+                      UrbanYog
                     </span>
                     <span className="font-label-caps text-[11px] uppercase tracking-widest text-text-secondary">
                       Women&apos;s Wellness
                     </span>
                   </div>
-                  <h3 className="font-headline-md text-2xl text-on-surface mb-3">UrbanYog</h3>
+                  <h3 className="font-headline-md text-2xl text-on-surface mb-3">Associate Director</h3>
                   <p className="font-body text-sm text-on-surface-variant leading-relaxed mb-6">
                     Crafted narrative-first empowerment campaigns tackling personal care taboos with sensitivity and cinematic nuance, building authentic community trust and strong social-first engagement.
                   </p>
@@ -86,27 +81,6 @@ export function BrandCaseStudy() {
             </FadeIn>
 
           </div>
-
-          {/* Action Links */}
-          <FadeIn delay={0.3}>
-            <div className="flex flex-col sm:flex-row gap-6 pt-4">
-              <a
-                href="https://www.youtube.com/playlist?list=PLE-OX6F6FSWkaqhLJlFybfIPTNIrbXAwh"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="font-nav text-nav uppercase text-tertiary hover:text-on-surface transition-colors flex items-center gap-2 border-b border-tertiary/30 hover:border-on-surface pb-1 w-fit"
-              >
-                Watch 45 Brand Campaign Films (YouTube) <span>→</span>
-              </a>
-            </div>
-          </FadeIn>
-
-          {/* Editorial Quote */}
-          <FadeIn delay={0.4}>
-            <blockquote className="font-pullquote text-pullquote text-on-surface pl-8 border-l border-tertiary/60 my-4 leading-tight">
-              &quot;Brand communication should not feel like advertising. It should feel like a story worth watching.&quot;
-            </blockquote>
-          </FadeIn>
 
         </div>
       </div>

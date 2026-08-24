@@ -42,47 +42,17 @@ export function CertificationsLedger() {
         
         {/* Section Header */}
         <FadeIn>
-          <div className="flex flex-col lg:flex-row lg:items-end justify-between mb-12 md:mb-16 gap-6 border-b border-border-subtle pb-8">
-            <div className="max-w-2xl">
-              <span className="font-label-caps text-label-caps text-tertiary uppercase tracking-[0.15em] mb-3 block">
-                03 / Technical Authorizations &amp; SISO Qualifications
-              </span>
-              <h2 className="font-headline-lg text-3xl sm:text-4xl md:text-headline-lg text-on-surface leading-tight">
-                Equipment Mastery &amp; Industry Standards
-              </h2>
-              <div className="w-12 h-1 bg-tertiary mt-6 mb-4"></div>
-              <p className="font-body text-body text-text-secondary leading-relaxed text-sm sm:text-base">
-                Official technical qualifications and operational authorizations certified by the University for the Creative Arts (UCA London / Farnham), validating hands-on mastery across Tier-1 cinema systems, gaffer lighting grids, production sound recorders, and soundstages.
-              </p>
-            </div>
-
-            {/* Quick Metrics Bar */}
-            <div className="grid grid-cols-3 gap-3 sm:gap-6 bg-surface-container-low p-4 sm:p-6 border border-border-subtle shrink-0">
-              <div className="flex flex-col">
-                <span className="font-metric-hero text-3xl sm:text-4xl text-tertiary">24</span>
-                <span className="font-label-caps text-[9px] sm:text-[10px] uppercase tracking-wider text-text-secondary mt-1">
-                  Certifications
-                </span>
-              </div>
-              <div className="flex flex-col border-l border-border-subtle pl-3 sm:pl-6">
-                <span className="font-display text-lg sm:text-2xl text-on-surface font-light leading-none pt-1">
-                  UCA
-                </span>
-                <span className="font-label-caps text-[9px] sm:text-[10px] uppercase tracking-wider text-text-secondary mt-2">
-                  London / SISO
-                </span>
-              </div>
-              <div className="flex flex-col border-l border-border-subtle pl-3 sm:pl-6">
-                <span className="font-display text-lg sm:text-2xl text-tertiary font-light leading-none pt-1">
-                  Tier-1
-                </span>
-                <span className="font-label-caps text-[9px] sm:text-[10px] uppercase tracking-wider text-text-secondary mt-2">
-                  ARRI / Sound Devices
-                </span>
-              </div>
-            </div>
+          <div className="max-w-3xl mx-auto text-center mb-12 md:mb-16 pb-8 border-b border-border-subtle flex flex-col items-center">
+            <h2 className="font-headline-lg text-3xl sm:text-4xl md:text-headline-lg text-on-surface leading-tight">
+              Equipment Mastery &amp; Industry Standards
+            </h2>
+            <div className="w-12 h-1 bg-tertiary mt-6 mb-4"></div>
+            <p className="font-body text-body text-text-secondary leading-relaxed text-sm sm:text-base">
+              Official technical qualifications and operational authorizations certified by the University for the Creative Arts (UCA London / Farnham), validating hands-on mastery across Tier-1 cinema systems, gaffer lighting grids, production sound recorders, and soundstages.
+            </p>
           </div>
         </FadeIn>
+
 
         {/* Category Filter Pills */}
         <FadeIn>

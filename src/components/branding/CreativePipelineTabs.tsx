@@ -109,18 +109,10 @@ export function CreativePipelineTabs() {
     <section className="w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-20 md:py-24 border-t border-border-subtle">
       
       {/* Section Header */}
-      <div className="flex flex-col md:flex-row md:items-end justify-between mb-16 pb-6 border-b border-border-subtle gap-6">
-        <div>
-          <span className="font-label-caps text-label-caps text-tertiary uppercase tracking-[0.15em] mb-3 block">
-            06 / Methodology
-          </span>
-          <h2 className="font-headline-lg text-display-mobile md:text-headline-lg text-on-surface">
-            The Creative Pipeline
-          </h2>
-        </div>
-        <p className="font-body text-body text-text-secondary text-sm md:text-base max-w-md leading-relaxed">
-          My role sits across the entire creative pipeline—bridging what makes something creatively compelling with what makes it commercially effective.
-        </p>
+      <div className="mb-16 pb-6 border-b border-border-subtle">
+        <h2 className="font-headline-lg text-display-mobile md:text-headline-lg text-on-surface">
+          Creative Pipeline
+        </h2>
       </div>
 
       <div className="grid grid-cols-12 gap-gutter-desktop items-start">

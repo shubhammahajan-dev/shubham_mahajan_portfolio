@@ -29,12 +29,11 @@ const editingSuites = [
   {
     name: 'DaVinci Resolve',
     lines: ['DaVinci', 'Resolve'],
-    desc: 'Color Grading & Finishing',
+    desc: 'Colour Grading & Finishing',
     svg: (
       <svg className="w-12 h-12 md:w-14 md:h-14 text-tertiary fill-current overflow-visible" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
         <circle cx="24" cy="24" r="21" fill="none" stroke="currentColor" strokeWidth="2" strokeDasharray="3 3" opacity="0.6" />
         <g transform="translate(24, 24)">
-          {/* DaVinci 3-petal color iris */}
           <path d="M0 0 L-10 -16 A18 18 0 0 1 10 -16 Z" fill="currentColor" opacity="0.9" />
           <path d="M0 0 L16 4 A18 18 0 0 1 6 18 Z" fill="currentColor" opacity="0.75" />
           <path d="M0 0 L-6 18 A18 18 0 0 1 -16 4 Z" fill="currentColor" opacity="0.6" />
@@ -51,9 +50,7 @@ const editingSuites = [
       <svg className="w-12 h-12 md:w-14 md:h-14 text-tertiary fill-current overflow-visible" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
         <rect x="4" y="16" width="40" height="26" rx="3" fill="none" stroke="currentColor" strokeWidth="2" />
         <path d="M4 8 L44 8 L44 14 L4 14 Z" fill="currentColor" opacity="0.25" stroke="currentColor" strokeWidth="1.5" />
-        {/* Clapperboard stripes */}
         <path d="M10 8 L16 14 M20 8 L26 14 M30 8 L36 14 M40 8 L44 12" stroke="currentColor" strokeWidth="2" strokeLinecap="round" />
-        {/* Play star / flare */}
         <path d="M24 23 L26 27 L30 29 L26 31 L24 35 L22 31 L18 29 L22 27 Z" fill="currentColor" />
       </svg>
     )
@@ -66,7 +63,6 @@ const editingSuites = [
       <svg className="w-12 h-12 md:w-14 md:h-14 text-tertiary fill-current overflow-visible" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
         <rect x="2" y="2" width="44" height="44" rx="4" fill="none" stroke="currentColor" strokeWidth="1.5" strokeDasharray="4 2" opacity="0.4" />
         <g transform="translate(6, 12)">
-          {/* Avid geometric letters / triangles */}
           <path d="M4 22 L10 2 L16 22 L12 22 L10 15 L6 15 L4 22 Z M7 12 L9 6 L11 12 Z" fill="currentColor" />
           <path d="M16 10 L21 22 L26 10 L22 10 L21 16 L20 10 Z" fill="currentColor" />
           <path d="M28 8 L32 8 L32 22 L28 22 Z" fill="currentColor" />
@@ -79,25 +75,27 @@ const editingSuites = [
 
 const disciplineDepartments = [
   {
-    dept: 'Directorial Leadership',
+    dept: 'Direction & Creative Leadership',
     disciplines: [
       { no: '01', title: 'Direction', desc: 'Guiding creative vision, character psychology, visual rhythm, and on-set performance.' },
-      { no: '02', Associate: true, title: 'Associate Direction', desc: 'Bridging creative intent and logistical execution; managing shot continuity and set pacing.' },
+      { no: '02', title: 'Creative Direction', desc: 'Shaping the overall creative language, visual identity, storytelling approach, and audience experience.' },
+      { no: '03', title: 'Associate Direction', desc: 'Bridging creative intent with production execution, managing shot continuity, pacing, and on-set coordination.' },
     ]
   },
   {
     dept: 'Art & Acoustic Architecture',
     disciplines: [
-      { no: '03', title: 'Production Design', desc: 'Architecting visual worlds, set decoration, color palettes, and period authenticity.' },
-      { no: '04', title: 'Sound Design', desc: 'Sculpting acoustic atmosphere, dialogue texture, foley design, and emotional soundscapes.' },
-      { no: '05', title: 'Cinematography', desc: 'Designing camera movement, lighting composition, lens choices, and textural lighting.' },
+      { no: '04', title: 'Production Design', desc: 'Building visual worlds through sets, props, colour palettes, spatial design, and period detail.' },
+      { no: '05', title: 'Sound Design', desc: 'Sculpting acoustic atmosphere, dialogue texture, foley, and emotional soundscapes.' },
+      { no: '06', title: 'Cinematography', desc: 'Designing camera movement, lighting, lens choices, composition, and visual texture.' },
     ]
   },
   {
     dept: 'Supervision & Post Pipeline',
     disciplines: [
-      { no: '06', title: 'Script Supervision', desc: 'Maintaining continuity rigor, dialogue accuracy, coverage tracking, and editorial slating.' },
-      { no: '07', title: 'Post Production', desc: 'Supervising assembly, color grading pipelines, sound mixing, and final delivery masters.' },
+      { no: '07', title: 'Script Supervision', desc: 'Maintaining continuity, dialogue accuracy, coverage tracking, and editorial slating.' },
+      { no: '08', title: 'Post-Production', desc: 'Shaping the final film through editing, colour grading, sound mixing, finishing, and delivery.' },
+      { no: '09', title: 'Editorial Supervision', desc: 'Managing cuts, footage organisation, proxies, film length, and collaboration with editors, colourists, and sound designers.' },
     ]
   }
 ]
@@ -123,7 +121,7 @@ export default function FilmsPage() {
         <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full relative z-20 pb-section-mobile md:pb-section-desktop">
           <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop">
             <div className="col-span-1 md:col-span-10 lg:col-span-8">
-              <h1 className="font-display text-display-mobile md:text-display text-on-surface uppercase tracking-tight mix-blend-difference mb-4">
+              <h1 className="font-display text-display-mobile md:text-display text-on-surface tracking-tight mix-blend-difference mb-4">
                 Filmmaking
               </h1>
               <p className="font-nav text-nav text-on-surface uppercase tracking-[0.12em] mix-blend-difference opacity-80 border-b border-border-subtle inline-block pb-2">
@@ -137,19 +135,19 @@ export default function FilmsPage() {
       {/* § 1.2 — Practice Introduction */}
       <FadeIn>
         <section className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full py-section-mobile md:py-section-desktop">
-          <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop">
-            <div className="col-span-1 md:col-span-4 lg:col-span-3">
-              <div className="flex flex-col gap-4">
-                <span className="font-nav text-label-caps uppercase tracking-[0.15em] text-text-secondary">01 / Films</span>
-                <h2 className="font-headline-md text-[36px] md:text-headline-md text-on-surface">The Complete Craft</h2>
-              </div>
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop items-start">
+            <div className="col-span-1 md:col-span-4 lg:col-span-4 flex flex-col gap-4">
+              <h2 className="font-headline-md text-3xl sm:text-4xl md:text-headline-md text-on-surface">
+                About Me
+              </h2>
+              <div className="w-12 h-1 bg-tertiary mt-1" />
             </div>
-            <div className="col-span-1 md:col-span-8 lg:col-span-6 lg:col-start-6 mt-8 md:mt-0">
-              <div className="max-w-reading-max flex flex-col gap-8">
-                <p className="font-body text-body text-on-surface-variant text-justify opacity-90">
+            <div className="col-span-1 md:col-span-8 lg:col-span-7 lg:col-start-6 mt-6 md:mt-0">
+              <div className="max-w-reading-max flex flex-col gap-6 font-body text-sm sm:text-base md:text-body text-text-secondary leading-relaxed">
+                <p>
                   Cinema is where my creative practice began. My filmmaking experience spans direction, associate direction, production design, sound design, script supervision, cinematography and post-production, allowing me to approach projects from both the creative vision and operational execution.
                 </p>
-                <p className="font-body text-body text-on-surface-variant text-justify opacity-90">
+                <p>
                   With an MA in Filmmaking from the University for the Creative Arts, London, complemented by a Diploma in Filmmaking and a Bachelor&apos;s degree in Civil Engineering, I view the frame through narrative architecture and technical discipline.
                 </p>
               </div>
@@ -158,15 +156,16 @@ export default function FilmsPage() {
         </section>
       </FadeIn>
 
-      {/* § 1.3 — Short Films (Colored Posters by Default) */}
+      {/* § 1.3 — Selected Work Screened at BFI London */}
       <FadeIn>
         <section className="w-full border-t border-border-subtle py-section-mobile md:py-section-desktop">
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div className="mb-intra-section">
-              <h3 className="font-nav text-label-caps uppercase tracking-[0.15em] text-text-secondary mb-4">02 / Selected Works</h3>
-              <h2 className="font-headline-md text-[36px] md:text-headline-md text-on-surface">Short Films &mdash; London</h2>
-              <p className="font-body text-body text-on-surface-variant mt-4 max-w-reading-max">
-                Three narrative short films co-produced in London during postgraduate studies at UCA. My contributions span Associate Direction, Production Design (2 films), Sound Design (1 film), and Script Supervision (1 film)—with selected work screened at BFI London.
+            <div className="mb-intra-section text-center max-w-3xl mx-auto flex flex-col items-center">
+              <h2 className="font-headline-md text-3xl sm:text-[36px] md:text-headline-md text-on-surface">
+                Selected Work Screened at BFI London
+              </h2>
+              <p className="font-body text-body text-on-surface-variant mt-4 max-w-reading-max leading-relaxed">
+                Three narrative films co-produced in London during postgraduate studies at University for the Creative Arts, London. My contributions span Associate Direction, Production Design, Sound Design, and Script Supervision.
               </p>
             </div>
 
@@ -175,7 +174,7 @@ export default function FilmsPage() {
         </section>
       </FadeIn>
 
-      {/* § 1.4 — Film Exhibition Showcases (Alternating Layouts) */}
+      {/* § 1.4 — Film Exhibition Showcases */}
       <FadeIn>
         <section className="w-full bg-surface-container-low py-section-mobile md:py-section-desktop border-y border-border-subtle">
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
@@ -184,13 +183,17 @@ export default function FilmsPage() {
         </section>
       </FadeIn>
 
-      {/* § 1.5 — Technical Practice & Camera Systems (with Background Images) */}
+      {/* § 1.5 — Technical Practice & Camera Systems */}
       <FadeIn>
         <section className="w-full bg-surface-container-low border-t border-border-subtle pt-section-mobile md:pt-section-desktop pb-section-mobile md:pb-section-desktop">
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
             <div className="mb-intra-section text-center max-w-2xl mx-auto">
-              <span className="font-nav text-label-caps uppercase tracking-[0.15em] text-tertiary mb-4 block">04 / Technical Practice</span>
-              <h2 className="font-headline-md text-[36px] md:text-headline-md text-on-surface">Systems &amp; Capabilities</h2>
+              <span className="font-nav text-label-caps uppercase tracking-[0.15em] text-tertiary mb-3 block">
+                Technical Practice
+              </span>
+              <h2 className="font-headline-md text-[36px] md:text-headline-md text-on-surface">
+                Systems &amp; Capabilities
+              </h2>
             </div>
 
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-gutter-desktop mb-section-desktop">
@@ -259,20 +262,15 @@ export default function FilmsPage() {
 
             </div>
 
-            {/* Redesigned Core Disciplines: Editorial Department Ledger */}
+            {/* Core Disciplines: Editorial Department Ledger */}
             <div className="w-full border-t border-border-subtle pt-16">
-              <div className="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
-                <div>
-                  <span className="font-label-caps text-label-caps uppercase tracking-[0.15em] text-tertiary mb-2 block">
-                    Complete Production Pipeline
-                  </span>
-                  <h3 className="font-headline-md text-[32px] md:text-headline-md text-on-surface">
-                    Core Filmmaking Disciplines
-                  </h3>
-                </div>
-                <p className="font-body text-body text-text-secondary max-w-md text-sm md:text-base">
-                  Hands-on mastery across every key department—from on-set directorial execution to technical sound design and post-production management.
-                </p>
+              <div className="flex flex-col items-center text-center mb-12 max-w-2xl mx-auto">
+                <span className="font-label-caps text-label-caps uppercase tracking-[0.15em] text-tertiary mb-2 block">
+                  Complete Production Pipeline
+                </span>
+                <h3 className="font-headline-md text-2xl sm:text-[32px] md:text-headline-md text-on-surface">
+                  Core Filmmaking Disciplines
+                </h3>
               </div>
 
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
@@ -285,14 +283,14 @@ export default function FilmsPage() {
                       {dept.disciplines.map((item) => (
                         <div key={item.no} className="group/item border-b border-border-subtle/50 pb-4 last:border-b-0 last:pb-0">
                           <div className="flex items-center justify-between mb-1.5">
-                            <h4 className="font-display text-2xl text-on-surface group-hover/item:text-tertiary transition-colors">
+                            <h4 className="font-display text-xl sm:text-2xl text-on-surface group-hover/item:text-tertiary transition-colors">
                               {item.title}
                             </h4>
                             <span className="font-label-caps text-[10px] text-text-secondary">
                               {item.no}
                             </span>
                           </div>
-                          <p className="font-body text-body text-on-surface-variant text-xs md:text-sm leading-relaxed">
+                          <p className="font-body text-body text-on-surface-variant text-xs sm:text-sm leading-relaxed">
                             {item.desc}
                           </p>
                         </div>
@@ -308,7 +306,7 @@ export default function FilmsPage() {
         </section>
       </FadeIn>
 
-      {/* § 1.7 — Behind The Scenes Grid */}
+      {/* § 1.6 — Behind The Scenes Grid */}
       <BtsGrid />
 
     </div>
