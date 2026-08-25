@@ -24,7 +24,7 @@ const slides: HeroSlide[] = [
     ctaText: 'Explore Films',
     href: '/films',
     image: '/images/films/hero.png',
-    mobileImage: '/images/home/mobile/IMG_0112.JPG',
+    mobileImage: '/images/home/mobile/films_mobile.JPG',
     imageAlt: 'Cinematic film camera production set'
   },
   {
@@ -34,7 +34,7 @@ const slides: HeroSlide[] = [
     ctaText: 'View Brand Work',
     href: '/branding',
     image: '/images/branding/hero.png',
-    mobileImage: '/images/home/mobile/IMG_0114.JPG',
+    mobileImage: '/images/home/mobile/branding_mobile.JPG',
     imageAlt: 'High-end studio commercial production'
   },
   {
@@ -44,7 +44,7 @@ const slides: HeroSlide[] = [
     ctaText: 'Discover Events',
     href: '/events',
     image: '/images/events/hero.png',
-    mobileImage: '/images/home/mobile/IMG_0115.JPG',
+    mobileImage: '/images/home/mobile/events_mobile.JPG',
     imageAlt: 'Theatrical red carpet and press junket orchestration'
   },
   {
@@ -54,7 +54,7 @@ const slides: HeroSlide[] = [
     ctaText: 'Explore Documentaries',
     href: '/documentary',
     image: '/images/documentary/hero.png',
-    mobileImage: '/images/home/mobile/IMG_0116.JPG',
+    mobileImage: '/images/home/mobile/documentaries_mobile.JPG',
     imageAlt: 'Documentary filmmaking and cultural movement cinematography'
   },
   {
