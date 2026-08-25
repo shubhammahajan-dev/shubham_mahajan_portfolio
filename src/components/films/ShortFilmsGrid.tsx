@@ -64,17 +64,24 @@ export function ShortFilmsGrid() {
                 className={`object-cover object-center transition-transform duration-700 md:group-hover:scale-105 ${isActive ? 'scale-105' : ''}`} 
               />
 
+              {/* Mobile Tap Indicator when inactive */}
+              {!isActive && (
+                <div className="md:hidden absolute top-3 right-3 z-10 font-label-caps text-[9px] uppercase tracking-widest bg-background/90 px-2.5 py-1 border border-border-subtle text-[#E5C992] pointer-events-none backdrop-blur-sm">
+                  Tap to view
+                </div>
+              )}
+
               {/* Overlay on hover / tap */}
               <div 
-                className={`absolute inset-0 bg-background/90 transition-opacity duration-500 flex flex-col justify-end p-6 md:p-8 border-t-2 border-transparent md:group-hover:border-tertiary ${isActive ? 'opacity-100 border-tertiary' : 'opacity-0'} md:group-hover:opacity-100 overflow-y-auto custom-scrollbar`}
+                className={`absolute inset-0 bg-background/95 transition-opacity duration-500 flex flex-col justify-end p-6 md:p-8 border-t-2 border-transparent md:group-hover:border-tertiary ${isActive ? 'opacity-100 border-tertiary' : 'opacity-0'} md:group-hover:opacity-100 overflow-y-auto custom-scrollbar`}
               >
                 <span className="font-label-caps text-[10px] uppercase tracking-widest text-text-secondary mb-1">
                   {film.location} &middot; {film.year}
                 </span>
-                <h4 className="font-display-mobile text-display-mobile text-on-surface mb-2">{film.title}</h4>
-                <p className="font-nav text-xs md:text-nav uppercase tracking-[0.12em] text-tertiary mb-6 pb-4 border-b border-border-subtle">{film.role}</p>
+                <h4 className="font-display-mobile text-2xl sm:text-display-mobile text-on-surface mb-2">{film.title}</h4>
+                <p className="font-nav text-xs md:text-nav uppercase tracking-[0.12em] text-tertiary mb-4 md:mb-6 pb-3 md:pb-4 border-b border-border-subtle">{film.role}</p>
                 
-                <div className="flex flex-col gap-6 transform translate-y-4 opacity-0 transition-all duration-500 delay-100 md:group-hover:translate-y-0 md:group-hover:opacity-100">
+                <div className={`flex flex-col gap-4 sm:gap-6 transform transition-all duration-500 delay-75 ${isActive ? 'translate-y-0 opacity-100' : 'translate-y-4 opacity-0'} md:group-hover:translate-y-0 md:group-hover:opacity-100`}>
                   <p className="font-body text-body text-on-surface-variant text-xs md:text-sm leading-relaxed">
                     {film.synopsis}
                   </p>
