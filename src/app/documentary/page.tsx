@@ -17,16 +17,7 @@ const curatedStills = [
   '/images/documentary/stills/dsc_0962.jpg',
   '/images/documentary/stills/img_7758.jpg',
   '/images/documentary/stills/img_7811.jpg',
-  '/images/documentary/stills/bts-01.jpg',
-  '/images/documentary/stills/bts-03.jpg',
-  '/images/documentary/stills/bts-04.jpg',
-  '/images/documentary/stills/bts-5.jpg',
-  '/images/documentary/stills/bts-07.jpg',
-  '/images/documentary/stills/bts-09.jpg',
-  '/images/documentary/stills/bts-10.jpg',
-  '/images/documentary/stills/bts-11.jpg',
-  '/images/documentary/stills/bts-14.jpg',
-  '/images/documentary/stills/bts-16.jpg',
+  '/images/documentary/stills/img_7978.jpg',
 ]
 
 export default function DocumentaryPage() {
@@ -34,31 +25,41 @@ export default function DocumentaryPage() {
     <div className="flex flex-col min-h-screen">
       
       {/* ======================= HERO SECTION ======================= */}
-      <section className="relative w-full h-[100dvh] flex items-end pb-section-desktop overflow-hidden">
+      <section className="w-full relative h-screen flex items-end">
         <div className="absolute inset-0 w-full h-full">
+          {/* Desktop Landscape */}
           <Image 
             src="/images/documentary/hero.png" 
             alt="Documentary Storytelling" 
             fill 
             sizes="100vw"
-            className="object-cover object-center" 
+            className="object-cover object-center hidden md:block" 
+            priority 
+          />
+          {/* Mobile Portrait */}
+          <Image 
+            src="/images/home/mobile/documentaries_mobile.JPG" 
+            alt="Documentary Storytelling" 
+            fill 
+            sizes="100vw"
+            className="object-cover object-center block md:hidden" 
             priority 
           />
         </div>
         
-        {/* Scrims */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-0" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-transparent z-0" />
-        <div className="absolute inset-0 bg-black/20 z-0" />
+        {/* Scrim */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-background/60 to-transparent mix-blend-multiply" />
 
-        <div className="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          <div className="max-w-4xl">
-            <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[76px] leading-[1.05] text-on-surface uppercase tracking-tight mb-4">
-              Documentaries
-            </h1>
-            <p className="font-nav text-xs sm:text-sm md:text-nav uppercase tracking-[0.12em] text-[#E5C992] font-medium">
-              Realism &middot; Interviews &middot; Experiences
-            </p>
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full relative z-20 pb-section-mobile md:pb-section-desktop">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop">
+            <div className="col-span-1 md:col-span-10 lg:col-span-8">
+              <h1 className="font-display text-display-mobile md:text-display text-on-surface tracking-tight mix-blend-difference mb-4">
+                Documentaries
+              </h1>
+              <p className="font-nav text-nav text-on-surface uppercase tracking-[0.12em] mix-blend-difference opacity-80 border-b border-border-subtle inline-block pb-2">
+                Realism &middot; Interviews &middot; Experiences
+              </p>
+            </div>
           </div>
         </div>
       </section>
@@ -177,7 +178,7 @@ export default function DocumentaryPage() {
                 Goa Sunsplash Film / Recap
               </h3>
               <VideoEmbed 
-                thumbnailSrc="/images/documentary/goa-sunsplash-reel-thumb.jpg" 
+                thumbnailSrc="/images/documentary/goa-sunsplash-01.jpg" 
                 label="Festival Recap Video" 
                 videoUrl="https://drive.google.com/file/d/1mQEQGsXdhgBYo8zy9htYDT1Ws9htCyK5/preview"
               />
@@ -239,24 +240,33 @@ export default function DocumentaryPage() {
       {/* ======================= STILLS GALLERY ======================= */}
       <FadeIn>
         <section className="w-full border-t border-border-subtle bg-surface-container-low py-section-desktop">
-          <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop mb-12 md:mb-16 flex justify-between items-end border-b border-border-subtle pb-6">
-            <h2 className="font-headline-md text-3xl md:text-[48px] text-on-surface">Curated Stills</h2>
-          </div>
-
           <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6">
+            
+            {/* Centered Section Header */}
+            <div className="mb-12 md:mb-16 flex justify-center text-center pb-6 border-b border-border-subtle">
+              <h2 className="font-headline-lg text-display-mobile md:text-headline-lg text-on-surface">
+                Curated Stills
+              </h2>
+            </div>
+
+            {/* Masonry Collage Grid */}
+            <div className="columns-2 sm:columns-3 lg:columns-4 gap-4 md:gap-6 space-y-4 md:space-y-6">
               {curatedStills.map((img, idx) => (
-                <div key={idx} className="group aspect-[4/3] border border-border-subtle overflow-hidden bg-background relative">
-                  <Image 
-                    src={img} 
-                    alt={`Documentary and observational still ${idx + 1}`} 
-                    fill 
-                    sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, (max-width: 1280px) 33vw, 25vw" 
-                    className="object-cover grayscale opacity-85 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-700 ease-out transform group-hover:scale-105" 
-                  />
-                </div>
+                <FadeIn key={`${img}-${idx}`} delay={Math.min(idx * 0.02, 0.3)} className="break-inside-avoid">
+                  <div className="relative w-full group overflow-hidden bg-surface border border-border-subtle hover:border-tertiary/60 transition-all duration-500">
+                    <Image 
+                      src={img} 
+                      alt={`Documentary and observational still ${idx + 1}`} 
+                      width={800}
+                      height={800}
+                      sizes="(max-width: 640px) 50vw, (max-width: 1024px) 33vw, 25vw" 
+                      className="w-full h-auto object-cover grayscale opacity-90 transition-all duration-700 ease-out group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-[1.03]" 
+                    />
+                  </div>
+                </FadeIn>
               ))}
             </div>
+
           </div>
         </section>
       </FadeIn>

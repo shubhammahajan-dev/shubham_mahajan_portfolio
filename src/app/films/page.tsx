@@ -107,12 +107,22 @@ export default function FilmsPage() {
       {/* § 1.1 — Hero */}
       <section className="w-full relative h-screen flex items-end">
         <div className="absolute inset-0 z-0">
+          {/* Desktop Landscape */}
           <Image
             src="/images/films/hero.png"
             alt="Filmmaking hero image"
             fill
             sizes="100vw"
-            className="object-cover"
+            className="object-cover object-center hidden md:block"
+            priority
+          />
+          {/* Mobile Portrait */}
+          <Image
+            src="/images/home/mobile/films_mobile.JPG"
+            alt="Filmmaking hero image"
+            fill
+            sizes="100vw"
+            className="object-cover object-center block md:hidden"
             priority
           />
         </div>
@@ -138,7 +148,7 @@ export default function FilmsPage() {
           <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop items-start">
             <div className="col-span-1 md:col-span-4 lg:col-span-4 flex flex-col gap-4">
               <h2 className="font-headline-md text-3xl sm:text-4xl md:text-headline-md text-on-surface">
-                About Me
+                The Complete Craft
               </h2>
               <div className="w-12 h-1 bg-tertiary mt-1" />
             </div>
@@ -165,7 +175,7 @@ export default function FilmsPage() {
                 Selected Work Screened at BFI London
               </h2>
               <p className="font-body text-body text-on-surface-variant mt-4 max-w-reading-max leading-relaxed">
-                Three narrative films co-produced in London during postgraduate studies at University for the Creative Arts, London. My contributions span Associate Direction, Production Design, Sound Design, and Script Supervision.
+                Three narrative films co-produced in London during postgraduate studies at University for the Creative Arts, London. My contributions span Associate Director, Production Designer, Sound Designer, and Script Supervisor.
               </p>
             </div>
 

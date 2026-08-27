@@ -19,30 +19,42 @@ export default function EventsPage() {
     <div className="flex flex-col min-h-screen text-on-surface">
       
       {/* ======================= § 2.1 — HERO ======================= */}
-      <section className="relative w-full h-screen flex flex-col justify-end pb-16 md:pb-24 overflow-hidden">
+      <section className="w-full relative h-screen flex items-end">
         <div className="absolute inset-0 z-0">
+          {/* Desktop Landscape */}
           <Image 
             src="/images/events/hero.png" 
             alt="High-Stakes Events and Press Junkets" 
             fill 
             sizes="100vw"
-            className="object-cover object-center" 
+            className="object-cover object-center hidden md:block" 
+            priority 
+          />
+          {/* Mobile Portrait */}
+          <Image 
+            src="/images/home/mobile/events_mobile.JPG" 
+            alt="High-Stakes Events and Press Junkets" 
+            fill 
+            sizes="100vw"
+            className="object-cover object-center block md:hidden" 
             priority 
           />
         </div>
         
-        {/* Scrims */}
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-0" />
-        <div className="absolute inset-0 bg-gradient-to-b from-background/80 via-transparent to-transparent z-0" />
-        <div className="absolute inset-0 bg-black/30 z-0" />
+        {/* Scrim */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-background/60 to-transparent mix-blend-multiply" />
 
-        <div className="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          <h1 className="max-w-5xl font-display text-4xl sm:text-5xl md:text-6xl lg:text-[76px] leading-[1.05] text-on-surface uppercase tracking-tight mb-4">
-            Events &amp; Junkets
-          </h1>
-          <p className="font-nav text-xs sm:text-sm md:text-nav uppercase tracking-[0.12em] text-[#E5C992] font-medium">
-            Global Talent &middot; Promotions &middot; Hospitality
-          </p>
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full relative z-20 pb-section-mobile md:pb-section-desktop">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop">
+            <div className="col-span-1 md:col-span-10 lg:col-span-8">
+              <h1 className="font-display text-display-mobile md:text-display text-on-surface tracking-tight mix-blend-difference mb-4">
+                Events &amp; Junkets
+              </h1>
+              <p className="font-nav text-nav text-on-surface uppercase tracking-[0.12em] mix-blend-difference opacity-80 border-b border-border-subtle inline-block pb-2">
+                Culture &middot; Luxury &middot; Operations
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 
@@ -69,9 +81,6 @@ export default function EventsPage() {
                 </p>
                 <p>
                   Alongside execution, managing budgets, production timelines, vendor billing, client requirements, marketing deliverables and stakeholder reporting.
-                </p>
-                <p className="text-on-surface font-medium pt-2 border-t border-border-subtle">
-                  Every engagement requires precision, discretion and rapid decision-making, ensuring technical, creative and commercial objectives remain aligned from pre-production through final execution.
                 </p>
               </div>
 

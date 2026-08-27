@@ -12,27 +12,42 @@ export default function BrandingPage() {
     <div className="flex flex-col min-h-screen text-on-surface">
       
       {/* ======================= HERO SECTION ======================= */}
-      <section className="relative w-full h-screen flex flex-col justify-end pb-16 md:pb-section-desktop overflow-hidden">
+      <section className="w-full relative h-screen flex items-end">
         <div className="absolute inset-0 z-0">
+          {/* Desktop Landscape */}
           <Image 
             src="/images/branding/hero.png" 
             alt="Branding and Creative Strategy" 
             fill 
             sizes="100vw"
-            className="object-cover" 
+            className="object-cover object-center hidden md:block" 
+            priority 
+          />
+          {/* Mobile Portrait */}
+          <Image 
+            src="/images/home/mobile/branding_mobile.JPG" 
+            alt="Branding and Creative Strategy" 
+            fill 
+            sizes="100vw"
+            className="object-cover object-center block md:hidden" 
             priority 
           />
         </div>
-        <div className="absolute inset-0 bg-gradient-to-t from-background via-background/60 to-transparent z-0" />
-        <div className="absolute inset-0 bg-black/25 z-0" />
+        
+        {/* Scrim */}
+        <div className="absolute inset-0 z-10 bg-gradient-to-t from-background via-background/60 to-transparent mix-blend-multiply" />
 
-        <div className="relative z-10 w-full max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
-          <h1 className="font-display text-4xl sm:text-5xl md:text-6xl lg:text-[76px] leading-[1.05] text-on-surface uppercase tracking-tight mb-4">
-            Branding &amp; Marketing
-          </h1>
-          <p className="font-nav text-xs sm:text-sm md:text-nav uppercase tracking-[0.12em] text-[#E5C992] font-medium">
-            Campaigns &middot; Business &middot; Entrepreneurship
-          </p>
+        <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop w-full relative z-20 pb-section-mobile md:pb-section-desktop">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-gutter-desktop">
+            <div className="col-span-1 md:col-span-10 lg:col-span-8">
+              <h1 className="font-display text-display-mobile md:text-display text-on-surface tracking-tight mix-blend-difference mb-4">
+                Branding &amp; Marketing
+              </h1>
+              <p className="font-nav text-nav text-on-surface uppercase tracking-[0.12em] mix-blend-difference opacity-80 border-b border-border-subtle inline-block pb-2">
+                Campaigns &middot; Business &middot; Entrepreneurship
+              </p>
+            </div>
+          </div>
         </div>
       </section>
 

@@ -2,17 +2,25 @@ import Image from 'next/image'
 import { FadeIn } from '@/components/ui/FadeIn'
 
 const filmBtsImages = [
+  '/images/films/bts/bts-01.jpg',
   '/images/films/bts/bts-02.jpg',
+  '/images/films/bts/bts-03.jpg',
+  '/images/films/bts/bts-04.jpg',
+  '/images/films/bts/bts-5.jpg',
   '/images/films/bts/bts-06.jpg',
-  '/images/films/bts/bts-13.jpg',
-  '/images/films/bts/bts-15.jpg',
-  '/images/films/bts/bts-17.jpg',
+  '/images/films/bts/bts-07.jpg',
+  '/images/films/bts/bts-09.jpg',
+  '/images/films/bts/bts-10.jpg',
+  '/images/films/bts/bts-11.jpg',
   '/images/films/bts/bts-12.jpg',
-  '/images/films/bts/bts-05.jpg',
+  '/images/films/bts/bts-13.jpg',
+  '/images/films/bts/bts-14.jpg',
+  '/images/films/bts/bts-15.jpg',
+  '/images/films/bts/bts-16.jpg',
+  '/images/films/bts/bts-17.jpg',
   '/images/films/bts/oi7a9326.jpg',
   '/images/films/bts/oi7a8967.jpg',
   '/images/films/bts/oi7a9421.jpg',
-  '/images/films/bts/img_7978.jpg',
 ]
 
 export function BtsGrid() {
@@ -23,7 +31,7 @@ export function BtsGrid() {
         <FadeIn>
           <div className="mb-16 md:mb-24 flex flex-col items-center text-center">
             <h2 className="font-headline-md text-3xl sm:text-4xl md:text-headline-md text-on-surface">
-              On Set &amp; BTS
+              Behind the Scenes
             </h2>
             <div className="w-12 h-px bg-tertiary mt-6" />
           </div>

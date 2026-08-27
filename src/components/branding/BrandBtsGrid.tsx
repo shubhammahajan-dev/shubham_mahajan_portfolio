@@ -29,7 +29,7 @@ export function BrandBtsGrid() {
         <FadeIn>
           <div className="mb-12 md:mb-16 flex justify-center text-center pb-6 border-b border-border-subtle">
             <h2 className="font-headline-lg text-display-mobile md:text-headline-lg text-on-surface">
-              BTS
+              Behind the Scenes
             </h2>
           </div>
         </FadeIn>

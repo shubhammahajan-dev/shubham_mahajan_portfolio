@@ -56,17 +56,15 @@ const practiceAreas: PracticeArea[] = [
 
 export function AreasOfPractice() {
   return (
-    <section className="w-full py-section-mobile md:py-section-desktop border-t border-border-subtle bg-background">
+    <section className="w-full pt-12 md:pt-16 pb-section-mobile md:pb-section-desktop border-t border-border-subtle bg-background">
       <div className="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop">
         {/* Section Header */}
         <FadeIn>
-          <div className="flex flex-col gap-3 mb-10 md:mb-16">
-            <span className="font-label-caps text-label-caps text-tertiary uppercase tracking-widest border-b border-border-subtle pb-2 w-max">
-              Capabilities &amp; Scope
-            </span>
-            <h2 className="font-headline-lg text-3xl sm:text-headline-lg text-on-surface">
+          <div className="flex flex-col gap-3 mb-8 md:mb-12">
+            <h2 className="font-headline-lg text-3xl sm:text-4xl md:text-headline-lg text-on-surface">
               Areas of Practice
             </h2>
+            <div className="w-12 h-1 bg-tertiary mt-1" />
           </div>
         </FadeIn>
 

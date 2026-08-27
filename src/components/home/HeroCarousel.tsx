@@ -40,7 +40,7 @@ const slides: HeroSlide[] = [
   {
     id: 'events',
     title: 'Events & Junkets',
-    impact: 'Culture \u00b7 Luxury \u00b7 Experiences',
+    impact: 'Culture \u00b7 Luxury \u00b7 Operations',
     ctaText: 'Discover Events',
     href: '/events',
     image: '/images/events/hero.png',
@@ -64,7 +64,7 @@ const slides: HeroSlide[] = [
     ctaText: 'View The Record',
     href: '/acknowledgments',
     image: '/images/home/hero-landscape.jpg',
-    mobileImage: '/images/acknowledgments/shubham.png',
+    mobileImage: '/images/home/mobile/hero-landscape-portrait.jpg',
     imageAlt: 'Shubham Mahajan - Filmmaker & Creative Strategist'
   }
 ]

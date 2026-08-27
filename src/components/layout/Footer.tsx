@@ -44,9 +44,14 @@ export function Footer() {
             ))}
           </div>
 
-          <div className="font-nav text-[11px] uppercase tracking-[0.12em] text-text-secondary opacity-70 hover:opacity-100 transition-opacity">
-            Created by Akash Gurnale
-          </div>
+          <a
+            href="https://www.akashgurnale.com"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="font-nav text-[11px] uppercase tracking-[0.12em] text-text-secondary opacity-70 hover:opacity-100 hover:text-tertiary transition-all"
+          >
+            Created by Akash Gurnale ↗
+          </a>
         </div>
 
       </div>

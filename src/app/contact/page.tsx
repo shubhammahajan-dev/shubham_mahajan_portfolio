@@ -41,13 +41,6 @@ const engagementScopes = [
   }
 ]
 
-const socialLinks = [
-  { name: 'Instagram', url: 'https://www.instagram.com/shubhiedoobie/' },
-  { name: 'LinkedIn', url: 'https://www.linkedin.com/in/shubham-mahajan-462b20254/' },
-  { name: 'IMDb', url: 'https://www.imdb.com/name/nm15325237/' },
-  { name: 'YouTube', url: 'https://www.youtube.com/@shubhiedoobie' }
-]
-
 export default function ContactPage() {
   const [copied, setCopied] = useState(false)
   const email = 'spmahajan229@gmail.com'
@@ -157,39 +150,6 @@ export default function ContactPage() {
                     {item.tags}
                   </div>
                 </div>
-              ))}
-            </div>
-
-          </Container>
-        </section>
-      </FadeIn>
-
-
-      {/* ======================= § 6.4 — SOCIALS & BASE OF OPERATIONS ======================= */}
-      <FadeIn>
-        <section className="w-full bg-background py-section-desktop">
-          <Container className="flex flex-col sm:flex-row items-center justify-between gap-8">
-
-            <div className="flex flex-col text-center sm:text-left">
-              <span className="font-label-caps text-[10px] uppercase tracking-widest text-tertiary mb-1">
-                Base of Operations
-              </span>
-              <p className="font-nav text-sm uppercase tracking-wider text-on-surface">
-                London (UK) &middot; Mumbai (India) &middot; Worldwide
-              </p>
-            </div>
-
-            <div className="flex items-center gap-6 sm:gap-8 flex-wrap justify-center">
-              {socialLinks.map((social) => (
-                <a
-                  key={social.name}
-                  href={social.url}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="font-label-caps text-xs text-text-secondary hover:text-tertiary transition-colors uppercase tracking-widest"
-                >
-                  {social.name} ↗
-                </a>
               ))}
             </div>
 
