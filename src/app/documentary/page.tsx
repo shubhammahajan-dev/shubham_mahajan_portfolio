@@ -178,7 +178,7 @@ export default function DocumentaryPage() {
                 Goa Sunsplash Film / Recap
               </h3>
               <VideoEmbed 
-                thumbnailSrc="/images/documentary/goa-sunsplash-01.jpg" 
+                thumbnailSrc="/images/documentary/goa-sunsplash-reel-thumb.jpg" 
                 label="Festival Recap Video" 
                 videoUrl="https://drive.google.com/file/d/1mQEQGsXdhgBYo8zy9htYDT1Ws9htCyK5/preview"
               />
@@ -209,13 +209,13 @@ export default function DocumentaryPage() {
               </div>
 
               <div className="lg:col-span-7 relative aspect-video border border-border-subtle p-2 bg-surface-container-lowest">
-                <div className="w-full h-full border border-border-subtle overflow-hidden relative bg-surface-container-lowest flex items-center justify-center">
+                <div className="w-full h-full border border-border-subtle overflow-hidden relative">
                   <Image 
-                    src="/images/events/aazad_awaaz.jpeg" 
+                    src="/images/documentary/aazad_awaaz.jpeg" 
                     alt="Aazad Awaaz Fringe Festival" 
                     fill 
                     sizes="(max-width: 1024px) 100vw, 60vw"
-                    className="object-contain transition-all duration-700 ease-in-out hover:scale-105" 
+                    className="object-cover transition-all duration-700 ease-in-out hover:scale-105" 
                   />
                 </div>
               </div>
