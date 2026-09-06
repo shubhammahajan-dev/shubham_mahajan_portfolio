@@ -1,5 +1,3 @@
-import Link from 'next/link'
-
 const socialLinks = [
   { name: 'YouTube', url: 'https://www.youtube.com/@shubhiedoobie' },
   { name: 'LinkedIn', url: 'https://www.linkedin.com/in/shubham-mahajan-462b20254/' },
@@ -24,7 +22,7 @@ export function Footer() {
           </div>
 
           <div className="font-nav uppercase tracking-[0.12em] text-[#E5C992] text-xs md:text-sm text-center md:text-right">
-            Filmmaking &middot; Direction &middot; Production &middot; Hospitality &middot; Events
+            Filmmaking &middot; Direction &middot; Production &middot; Operations &middot; Events
           </div>
         </div>
 

@@ -100,7 +100,7 @@ export default function AcknowledgmentsPage() {
                   Formal Acknowledgments
                 </h2>
                 <p className="font-body text-body text-text-secondary">
-                  Direct social shares and public endorsements from acclaimed Indian filmmakers Vishal Bhardwaj and Hansal Mehta.
+                  Direct social shares and public endorsements from acclaimed Indian filmmakers Vishal Bhardwaj and Hansal Mehta for Art of Persuasion (Research Paper).
                 </p>
               </div>
               <div className="lg:col-span-6 flex flex-col justify-end">
@@ -174,7 +174,7 @@ export default function AcknowledgmentsPage() {
               <h2 className="font-headline-md text-3xl md:text-headline-md text-on-surface">Education</h2>
               <div className="w-8 h-px bg-tertiary mt-4 md:mt-6"></div>
               <p className="font-body text-body text-text-secondary mt-6 md:mt-8 max-w-sm text-sm md:text-base leading-relaxed">
-                My structural engineering background provides a disciplined foundation that meets the creative language of filmmaking, allowing for a rigorous yet fluid approach to visual storytelling.
+                Shubham Mahajan&apos;s structural engineering background provides a disciplined foundation that meets the creative language of filmmaking, allowing for a rigorous yet fluid approach to visual storytelling.
               </p>
             </div>
 
@@ -267,7 +267,7 @@ export default function AcknowledgmentsPage() {
             <div className="lg:col-span-8">
               <div>
                 <p className="font-body text-body text-text-secondary mb-8 md:mb-12 max-w-reading-max text-sm md:text-base leading-relaxed">
-                  A decade of movement practice and one year of Theatre experience deeply influence my understanding of rhythm, blocking, and the physical language of cinema.
+                  A decade of movement practice and one year of Theatre experience deeply influence Shubham Mahajan&apos;s understanding of rhythm, blocking, and the physical language of cinema.
                 </p>
                 <div className="grid grid-cols-2 sm:grid-cols-3 gap-6 md:gap-8">
                   {['Contemporary', 'Freestyle', 'Lyrical', 'Hip-Hop', 'Indian Folk', 'Theatre (1 Year)'].map((style) => (

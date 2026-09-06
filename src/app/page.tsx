@@ -18,7 +18,7 @@ export default function Home() {
             {/* Left — 5 cols */}
             <div className="col-span-4 md:col-span-5 flex flex-col gap-4">
               <h2 className="font-headline-lg text-3xl sm:text-4xl md:text-headline-lg text-on-surface">
-                About Me
+                About Shubham Mahajan
               </h2>
               <div className="w-12 h-1 bg-tertiary mt-2" />
             </div>
@@ -26,13 +26,13 @@ export default function Home() {
             <div className="col-span-4 md:col-span-6 md:col-start-7 flex flex-col gap-6 pt-6 md:pt-0">
               <div className="font-body text-sm sm:text-base md:text-body text-text-secondary flex flex-col gap-5 md:gap-6 leading-relaxed">
                 <p>
-                  I work at the intersection of cinema, storytelling, luxury experiences, brand strategy, and high-profile productions.
+                  Shubham Mahajan works at the intersection of cinema, storytelling, luxury experiences, brand strategy, and high-profile productions.
                 </p>
                 <p>
-                  With an MA in Filmmaking from the University for the Creative Arts, London, my experience spans filmmaking, branded content, documentaries, creative direction, production, luxury events, international film junkets, and the management of globally recognised talent, athletes, artists, executives, and international dignitaries.
+                  With an MA in Filmmaking from the University for the Creative Arts, London, his experience spans filmmaking, branded content, documentaries, creative direction, production, luxury events, international film junkets, and the management of globally recognised talent, athletes, artists, executives, and international dignitaries.
                 </p>
                 <p>
-                  My work has taken me from film sets and edit suites to high-pressure international events, luxury hospitality environments, and large-scale brand campaigns, with an unwavering focus on storytelling, precision, discretion, and execution.
+                  His work has taken him from film sets and edit suites to high-pressure international events, luxury hospitality environments, and large-scale brand campaigns, with an unwavering focus on storytelling, precision, discretion, and execution.
                 </p>
               </div>
             </div>

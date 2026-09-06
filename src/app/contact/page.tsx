@@ -9,8 +9,8 @@ const engagementScopes = [
     scope: 'Scope 01',
     title: 'Cinema & Narrative Films',
     paragraphs: [
-      'Let’s build something worth watching. From the first spark of an idea to the final frame, we bring together research, creative development, crew, production design, technical planning, and post-production to turn ambitious ideas into films. From concept to crew line-up, set to screen, and rough cut to final master, every moving part is designed to serve the story.',
-      'You bring the dream. We build the world, the crew, and the machinery to make it real.'
+      'From the first spark of an idea to the final frame, Shubham Mahajan brings together research, creative development, crew, production design, technical planning, and post-production to turn ambitious ideas into cinematic reality. From concept to crew line-up, set to screen, and rough cut to final master, every moving part is designed to serve the story.',
+      'From visionary concept to screen, Shubham orchestrates the creative world, the crew, and the production machinery to realize the film.'
     ],
     tags: 'Shorts \u00b7 Features \u00b7 Festivals'
   },
@@ -18,7 +18,7 @@ const engagementScopes = [
     scope: 'Scope 02',
     title: 'Brand Strategy & Commercials',
     paragraphs: [
-      'Every brand has a different audience, ambition, and reason to exist. We start with research, understanding your customers, culture, competition, and what makes people choose. From there, we build tailored campaigns, founder stories, commercials, and content ecosystems designed to turn attention into intent. Strategy, storytelling, production, and distribution work as one system. We don’t make campaigns for brands; we build campaigns that make the right people want the brand.'
+      'Every brand has a distinct audience, ambition, and reason to exist. Shubham starts with research—understanding consumers, culture, competition, and buying motivations. From there, he crafts tailored campaigns, founder stories, commercials, and content ecosystems designed to convert attention into intent. Strategy, storytelling, production, and distribution function as a unified system, building campaigns that generate authentic brand desire.'
     ],
     tags: 'D2C \u00b7 B2B \u00b7 B2C'
   },
@@ -26,8 +26,8 @@ const engagementScopes = [
     scope: 'Scope 03',
     title: 'Events & International Junkets',
     paragraphs: [
-      'Big events are remembered for the experience, not the logistics behind them. We handle the details that make the impossible look effortless, from international travel, talent movement, rehearsals, technical riders, and production calls to VIP coordination and live stakeholder management.',
-      'Every call, car, camera, room, and rehearsal has a place. We make sure it all moves seamlessly, so your guests experience nothing but the extraordinary.'
+      'High-profile events are remembered for the experience, not the logistics behind them. Shubham handles the critical details that make complex productions look effortless—from international travel, talent movement, rehearsals, technical riders, and production calls to VIP coordination and live stakeholder management.',
+      'Every call, transit, camera, room, and rehearsal has a dedicated place, ensuring flawless execution so guests and talent experience nothing short of extraordinary.'
     ],
     tags: 'Culture \u00b7 Luxury \u00b7 Experiences'
   },
@@ -35,7 +35,7 @@ const engagementScopes = [
     scope: 'Scope 04',
     title: 'Music, Theatre & Performance',
     paragraphs: [
-      'Performance is rhythm, movement, and emotion. With experience across theatre and dance, we bring a strong sense of musicality and staging to musicals, music videos, live performances, and movement-led films. We understand how to translate rhythm into camera, space, choreography, and story, creating work that doesn’t just capture performance, but moves with it.'
+      'Performance is rhythm, movement, and emotion. Drawing on over a decade of dance and theatre training, Shubham Mahajan brings a refined sense of musicality and spatial staging to musicals, music videos, live performances, and movement-led films. He translates rhythm into camera movement, spatial blocking, choreography, and narrative tension—creating work that doesn’t just capture performance, but moves with it.'
     ],
     tags: 'Music \u00b7 Performance \u00b7 Lifestyle'
   }

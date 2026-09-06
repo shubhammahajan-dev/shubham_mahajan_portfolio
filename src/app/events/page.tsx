@@ -244,7 +244,7 @@ export default function EventsPage() {
                       'Line Management',
                       'Talent Movement',
                       'Crew Logistics',
-                      'Vendor Coordination',
+                      'Celebrity Management',
                       'Access & Accreditation',
                       'Transport',
                       'On Ground Troubleshooting',

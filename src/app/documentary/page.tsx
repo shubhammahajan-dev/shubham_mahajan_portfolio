@@ -78,10 +78,10 @@ export default function DocumentaryPage() {
               </div>
               <div className="lg:col-span-8 lg:col-start-5 max-w-reading-max font-body text-body text-text-secondary flex flex-col gap-6">
                 <p className="leading-relaxed">
-                  Documentary filmmaking demands patience, acute observation, rigorous research, and the ability to find narrative within unscripted reality. My work spans productions with BBC producers, large-scale music and cultural festival documentaries, and independent observational projects. Across these, I take a journalistic, reality-first approach, understanding the subject, researching context, questioning assumptions, and allowing the story to emerge naturally.
+                  Documentary filmmaking demands patience, acute observation, rigorous research, and the ability to find narrative within unscripted reality. Shubham Mahajan&apos;s work spans productions with BBC producers, large-scale music and cultural festival documentaries, and independent observational projects. Across these, he takes a journalistic, reality-first approach—understanding the subject, researching context, questioning assumptions, and allowing the story to emerge naturally.
                 </p>
                 <p className="leading-relaxed">
-                  I&apos;m particularly drawn to guerrilla-style filmmaking: working discreetly with real people in real environments, minimising the camera&apos;s presence so subjects remain natural and unselfconscious. But observation alone isn&apos;t enough; good documentary filmmaking also means asking uncomfortable questions, challenging what is presented, and pursuing what lies beneath the obvious story. The camera becomes a tool for access, investigation, and honest storytelling.
+                  He is particularly drawn to guerrilla-style filmmaking: working discreetly with real people in real environments, minimising the camera&apos;s presence so subjects remain natural and unselfconscious. But observation alone isn&apos;t enough; good documentary filmmaking also means asking uncomfortable questions, challenging what is presented, and pursuing what lies beneath the obvious story. The camera becomes a tool for access, investigation, and honest storytelling.
                 </p>
               </div>
             </div>

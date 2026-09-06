@@ -3,6 +3,7 @@
 import { useState, useEffect, useCallback, useRef } from 'react'
 import Image from 'next/image'
 import Link from 'next/link'
+import { useRouter } from 'next/navigation'
 import { motion, AnimatePresence } from 'framer-motion'
 
 interface HeroSlide {
@@ -75,8 +76,29 @@ export function HeroCarousel() {
   const [currentIndex, setCurrentIndex] = useState(0)
   const [direction, setDirection] = useState(1) // 1 = next, -1 = prev
   const [isPaused, setIsPaused] = useState(false)
+  const [isNavigating, setIsNavigating] = useState(false)
   const [progress, setProgress] = useState(0)
   const touchStartX = useRef<number | null>(null)
+  const router = useRouter()
+
+  // Pre-fetch all slide destinations on mount for instantaneous rendering
+  useEffect(() => {
+    slides.forEach((slide) => {
+      router.prefetch(slide.href)
+    })
+  }, [router])
+
+  const handleCtaClick = (e: React.MouseEvent<HTMLAnchorElement>, href: string) => {
+    e.preventDefault()
+    if (isNavigating) return
+    setIsNavigating(true)
+    setIsPaused(true)
+
+    // Smooth navigation after cinematic push-in transition
+    setTimeout(() => {
+      router.push(href)
+    }, 750)
+  }
 
   const goToSlide = useCallback((newIndex: number, newDirection?: number) => {
     const dir = newDirection ?? (newIndex > currentIndex ? 1 : -1)
@@ -203,7 +225,7 @@ export function HeroCarousel() {
             custom={direction}
             variants={slideVariants}
             initial="enter"
-            animate="center"
+            animate={isNavigating ? { scale: 1.10, opacity: 0.55, transition: { duration: 0.9, ease: [0.16, 1, 0.3, 1] } } : "center"}
             exit="exit"
             className="absolute inset-0 w-full h-full"
           >
@@ -243,7 +265,7 @@ export function HeroCarousel() {
             key={currentSlide.id}
             variants={textVariants}
             initial="enter"
-            animate="center"
+            animate={isNavigating ? { opacity: 0, y: -18, transition: { duration: 0.45, ease: 'easeInOut' } } : "center"}
             exit="exit"
             className="max-w-3xl"
           >
@@ -257,14 +279,31 @@ export function HeroCarousel() {
               {currentSlide.impact}
             </p>
 
-            {/* Direct CTA Link */}
+            {/* Direct CTA Link with Cinematic Tap Transition */}
             <div className="flex items-center gap-6">
               <Link
                 href={currentSlide.href}
-                className="inline-flex items-center gap-3 px-6 py-3 bg-tertiary text-surface-container-lowest font-nav text-xs md:text-nav uppercase tracking-[0.12em] font-semibold hover:bg-[#E5C992] transition-colors duration-300 group"
+                onClick={(e) => handleCtaClick(e, currentSlide.href)}
+                className="relative overflow-hidden inline-flex items-center gap-3 px-6 py-3 bg-tertiary text-surface-container-lowest font-nav text-xs md:text-nav uppercase tracking-[0.12em] font-semibold hover:bg-[#E5C992] active:scale-95 transition-all duration-300 group shadow-lg"
               >
-                <span>{currentSlide.ctaText}</span>
-                <span className="transform transition-transform duration-300 group-hover:translate-x-1">&rarr;</span>
+                <span className="relative z-10">{currentSlide.ctaText}</span>
+                <motion.span
+                  animate={isNavigating ? { x: 10 } : { x: 0 }}
+                  transition={{ duration: 0.5, ease: 'easeInOut' }}
+                  className="relative z-10 transform transition-transform duration-300 group-hover:translate-x-1"
+                >
+                  &rarr;
+                </motion.span>
+
+                {/* Golden sweep fill on tap */}
+                {isNavigating && (
+                  <motion.div
+                    initial={{ scaleX: 0 }}
+                    animate={{ scaleX: 1 }}
+                    transition={{ duration: 0.55, ease: [0.16, 1, 0.3, 1] }}
+                    className="absolute inset-0 bg-[#F5E2B8] origin-left z-0"
+                  />
+                )}
               </Link>
             </div>
           </motion.div>
@@ -335,6 +374,34 @@ export function HeroCarousel() {
         </div>
 
       </div>
+
+      {/* Full-Screen Cinematic Transition Overlay */}
+      <AnimatePresence>
+        {isNavigating && (
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            exit={{ opacity: 0 }}
+            transition={{ duration: 0.55, ease: [0.22, 1, 0.36, 1] }}
+            className="fixed inset-0 z-50 pointer-events-none bg-background/85 backdrop-blur-[8px] flex flex-col items-center justify-center select-none"
+          >
+            <motion.div
+              initial={{ scaleX: 0 }}
+              animate={{ scaleX: 1 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1] }}
+              className="w-20 h-[2px] bg-tertiary mb-4 origin-center"
+            />
+            <motion.span
+              initial={{ opacity: 0, y: 8 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ delay: 0.15, duration: 0.4 }}
+              className="font-nav text-xs uppercase tracking-[0.22em] text-[#E5C992]"
+            >
+              {currentSlide.title}
+            </motion.span>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </section>
   )
 }

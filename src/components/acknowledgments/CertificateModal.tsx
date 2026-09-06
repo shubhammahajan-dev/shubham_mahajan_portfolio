@@ -21,6 +21,12 @@ export function CertificateModal({
   hasMultiple = false,
 }: CertificateModalProps) {
   const [isZoomed, setIsZoomed] = useState(false)
+  const [prevCertId, setPrevCertId] = useState(certification?.id)
+
+  if (certification?.id !== prevCertId) {
+    setPrevCertId(certification?.id)
+    setIsZoomed(false)
+  }
 
   // Keyboard navigation
   useEffect(() => {
@@ -32,11 +38,6 @@ export function CertificateModal({
     window.addEventListener('keydown', handleKeyDown)
     return () => window.removeEventListener('keydown', handleKeyDown)
   }, [onClose, onNext, onPrev])
-
-  // Reset zoom on cert change
-  useEffect(() => {
-    setIsZoomed(false)
-  }, [certification])
 
   if (!certification) return null
 

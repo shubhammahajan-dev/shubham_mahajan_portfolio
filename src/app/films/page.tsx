@@ -155,10 +155,10 @@ export default function FilmsPage() {
             <div className="col-span-1 md:col-span-8 lg:col-span-7 lg:col-start-6 mt-6 md:mt-0">
               <div className="max-w-reading-max flex flex-col gap-6 font-body text-sm sm:text-base md:text-body text-text-secondary leading-relaxed">
                 <p>
-                  Cinema is where my creative practice began. My filmmaking experience spans direction, associate direction, production design, sound design, script supervision, cinematography and post-production, allowing me to approach projects from both the creative vision and operational execution.
+                  Cinema is where Shubham Mahajan&apos;s creative practice began. His filmmaking experience spans direction, associate direction, production design, sound design, script supervision, cinematography, and post-production, allowing him to approach projects from both creative vision and operational execution.
                 </p>
                 <p>
-                  With an MA in Filmmaking from the University for the Creative Arts, London, complemented by a Diploma in Filmmaking and a Bachelor&apos;s degree in Civil Engineering, I view the frame through narrative architecture and technical discipline.
+                  With an MA in Filmmaking from the University for the Creative Arts, London, complemented by a Diploma in Filmmaking and a Bachelor&apos;s degree in Civil Engineering, he views the frame through narrative architecture and technical discipline.
                 </p>
               </div>
             </div>
@@ -175,7 +175,7 @@ export default function FilmsPage() {
                 Selected Work Screened at BFI London
               </h2>
               <p className="font-body text-body text-on-surface-variant mt-4 max-w-reading-max leading-relaxed">
-                Three narrative films co-produced in London during postgraduate studies at University for the Creative Arts, London. My contributions span Associate Director, Production Designer, Sound Designer, and Script Supervisor.
+                Three narrative films co-produced in London during postgraduate studies at the University for the Creative Arts, London. Shubham&apos;s contributions span Associate Director, Production Designer, Sound Designer, and Script Supervisor.
               </p>
             </div>
 

@@ -3,6 +3,7 @@ import { Cormorant_Garamond, DM_Sans } from 'next/font/google'
 import '@/styles/globals.css'
 import { Navbar } from '@/components/navigation/Navbar'
 import { Footer } from '@/components/layout/Footer'
+import { ScrollNudge } from '@/components/ui/ScrollNudge'
 
 const cormorant = Cormorant_Garamond({
   subsets: ['latin'],
@@ -34,6 +35,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         <Navbar />
         <main className="w-full">{children}</main>
         <Footer />
+        <ScrollNudge />
       </body>
     </html>
   )

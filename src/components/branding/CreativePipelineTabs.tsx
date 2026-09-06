@@ -20,7 +20,7 @@ const pipelineSteps: PipelineStep[] = [
     title: 'INSIGHT',
     category: 'Strategic Discovery',
     headline: 'Uncovering the authentic human and commercial tension',
-    description: 'Data-driven cultural observation, audience psychology, and brand whitespace identification. We uncover the emotional truths and behavioral triggers that convert viewers into loyal brand advocates.',
+    description: 'Data-driven cultural observation, audience psychology, and brand whitespace identification, uncovering the emotional truths and behavioral triggers that convert viewers into loyal brand advocates.',
     deliverables: [
       'Cultural White Space Mapping',
       'Audience Psychographics & Triggers',
@@ -34,7 +34,7 @@ const pipelineSteps: PipelineStep[] = [
     title: 'IDEA',
     category: 'Creative Ideation',
     headline: 'Crafting the single organizing conceptual premise',
-    description: 'Developing high-concept creative hooks that cut through noise in crowded media landscapes. We translate strategic discovery into bold creative premises that captivate from the first three seconds.',
+    description: 'Developing high-concept creative hooks that cut through noise in crowded media landscapes, translating strategic discovery into bold creative premises that captivate from the first three seconds.',
     deliverables: [
       'Core Campaign Hook & Angle',
       'Creative Treatment & Pitch Deck',
@@ -90,7 +90,7 @@ const pipelineSteps: PipelineStep[] = [
     title: 'PERFORMANCE',
     category: 'Conversion Optimization',
     headline: 'Tracking ROI, ROAS, and retention metrics',
-    description: 'Analyzing retention curves, CTR, CPC, CPA, and ROAS. We extract qualitative and quantitative insights from audience behavior to optimize active campaigns and inform future creative iterations.',
+    description: 'Analyzing retention curves, CTR, CPC, CPA, and ROAS, extracting qualitative and quantitative insights from audience behavior to optimize active campaigns and inform future creative iterations.',
     deliverables: [
       'Creative Retention Analysis',
       'Benchmark Metric Tracking (CPM, CPA, ROAS)',

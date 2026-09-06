@@ -1,7 +1,6 @@
 "use client"
 
 import { useState, useMemo } from 'react'
-import Image from 'next/image'
 import { certifications, certificationCategories, Certification } from '@/data/certifications'
 import { CertificateModal } from '@/components/acknowledgments/CertificateModal'
 import { FadeIn } from '@/components/ui/FadeIn'
