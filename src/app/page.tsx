@@ -24,7 +24,7 @@ export default function Home() {
             </div>
             {/* Right — 6 cols, offset 1 */}
             <div className="col-span-4 md:col-span-6 md:col-start-7 flex flex-col gap-6 pt-6 md:pt-0">
-              <div className="font-body text-sm sm:text-base md:text-body text-text-secondary flex flex-col gap-5 md:gap-6 leading-relaxed">
+              <div className="font-body text-on-surface-variant flex flex-col gap-6 text-base md:text-lg leading-relaxed">
                 <p>
                   Shubham Mahajan works at the intersection of cinema, storytelling, luxury experiences, brand strategy, and high-profile productions.
                 </p>

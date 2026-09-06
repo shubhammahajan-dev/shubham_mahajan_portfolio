@@ -76,7 +76,7 @@ export default function DocumentaryPage() {
                 </h2>
                 <div className="w-12 h-1 bg-tertiary mt-4" />
               </div>
-              <div className="lg:col-span-8 lg:col-start-5 max-w-reading-max font-body text-body text-text-secondary flex flex-col gap-6">
+              <div className="lg:col-span-8 lg:col-start-5 max-w-reading-max font-body text-on-surface-variant flex flex-col gap-6 text-base md:text-lg leading-relaxed">
                 <p className="leading-relaxed">
                   Documentary filmmaking demands patience, acute observation, rigorous research, and the ability to find narrative within unscripted reality. Shubham Mahajan&apos;s work spans productions with BBC producers, large-scale music and cultural festival documentaries, and independent observational projects. Across these, he takes a journalistic, reality-first approach—understanding the subject, researching context, questioning assumptions, and allowing the story to emerge naturally.
                 </p>

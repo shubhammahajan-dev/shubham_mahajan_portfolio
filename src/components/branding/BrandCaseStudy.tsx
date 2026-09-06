@@ -19,7 +19,7 @@ export function BrandCaseStudy() {
         <div className="md:col-span-8 flex flex-col gap-12">
           
           <FadeIn>
-            <div className="font-body text-body text-on-surface-variant flex flex-col gap-6 text-base md:text-lg leading-relaxed">
+            <div className="font-body text-on-surface-variant flex flex-col gap-6 text-base md:text-lg leading-relaxed">
               <p>
                 As Associate Director of the GlobalBees creative team, Shubham Mahajan led creative strategy, production, and studio operations across two key portfolio brands: UrbanGabru (Men’s Grooming) and UrbanYog (Women’s Personal Care). Leading a multidisciplinary 7-person team across ideation, scripting, production, post-production, and distribution, he built and executed content systems that scaled the brands’ digital presence, from short-form retention-led formats to multi-million-view celebrity commercials.
               </p>

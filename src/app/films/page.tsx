@@ -153,7 +153,7 @@ export default function FilmsPage() {
               <div className="w-12 h-1 bg-tertiary mt-1" />
             </div>
             <div className="col-span-1 md:col-span-8 lg:col-span-7 lg:col-start-6 mt-6 md:mt-0">
-              <div className="max-w-reading-max flex flex-col gap-6 font-body text-sm sm:text-base md:text-body text-text-secondary leading-relaxed">
+              <div className="max-w-reading-max flex flex-col gap-6 font-body text-on-surface-variant text-base md:text-lg leading-relaxed">
                 <p>
                   Cinema is where Shubham Mahajan&apos;s creative practice began. His filmmaking experience spans direction, associate direction, production design, sound design, script supervision, cinematography, and post-production, allowing him to approach projects from both creative vision and operational execution.
                 </p>

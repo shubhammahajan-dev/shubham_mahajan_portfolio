@@ -72,7 +72,7 @@ export default function EventsPage() {
                 <div className="w-12 h-1 bg-tertiary mt-2" />
               </div>
 
-              <div className="lg:col-span-8 lg:col-start-5 max-w-reading-max font-body text-body text-on-surface-variant flex flex-col gap-6 leading-relaxed">
+              <div className="lg:col-span-8 lg:col-start-5 max-w-reading-max font-body text-on-surface-variant flex flex-col gap-6 text-base md:text-lg leading-relaxed">
                 <p>
                   Experience across international talent, press junkets, branded productions and high-visibility events, working at the intersection of production, operations and commercial execution. Coordinating with talent teams, production crews, agencies, brands and executive stakeholders across demanding, deadline-driven environments.
                 </p>
