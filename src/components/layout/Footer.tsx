@@ -43,12 +43,12 @@ export function Footer() {
           </div>
 
           <a
-            href="https://www.akashgurnale.com"
+            href="https://www.urbandigitalcollective.com"
             target="_blank"
             rel="noopener noreferrer"
             className="font-nav text-[11px] uppercase tracking-[0.12em] text-text-secondary opacity-70 hover:opacity-100 hover:text-tertiary transition-all"
           >
-            Created by Akash Gurnale ↗
+            Created by Urban Digital Collective ↗
           </a>
         </div>
 
