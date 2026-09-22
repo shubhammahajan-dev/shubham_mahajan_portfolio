@@ -5,8 +5,8 @@ import { CertificationsLedger } from '@/components/acknowledgments/Certification
 
 const experiences = [
   {
-    role: 'Front of House Associate',
-    company: 'Rosewood London',
+    role: 'Line Production Coordinator',
+    company: 'Events, Productions and Management',
     location: 'London, UK',
     period: '04/2024 \u2013 Present',
     description: 'Forbes 5-Star luxury hospitality operations, managing high-profile international guests, A-list talent, and private events with absolute discretion and protocol.',
@@ -117,6 +117,33 @@ export default function AcknowledgmentsPage() {
               </div>
             </div>
             
+            {/* Research Paper Entry */}
+            <div className="max-w-4xl mx-auto mb-10 border border-border-subtle bg-surface p-6 sm:p-8 hover:border-tertiary/60 transition-colors">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 pb-4 border-b border-border-subtle">
+                <span className="font-label-caps text-xs text-tertiary uppercase tracking-widest font-semibold">
+                  Film and Advertising Research
+                </span>
+                <span className="font-label-caps text-xs text-text-secondary uppercase tracking-widest">
+                  05/2023 &mdash; 05/2023 &middot; Farnham, UK
+                </span>
+              </div>
+
+              <div className="py-5">
+                <h3 className="font-headline-md text-2xl sm:text-3xl text-on-surface mb-2">
+                  The Art of Persuasion &mdash; Fursat
+                </h3>
+                <p className="font-nav text-xs sm:text-sm text-text-secondary uppercase tracking-wider mb-4">
+                  University for the Creative Arts
+                </p>
+                <div className="flex items-start gap-3 text-sm md:text-base text-on-surface-variant font-body leading-relaxed">
+                  <span className="text-tertiary mt-1 select-none font-bold">&bull;</span>
+                  <p>
+                    Examined how Vishal Bhardwaj&apos;s Apple iPhone campaign film <em>Fursat</em> employs cinematic language, visual storytelling and narrative construction as tools of persuasion and audience engagement; the research received public appreciation from Vishal Bhardwaj and Hansal Mehta.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             {/* Endorsement Gallery */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-4xl mx-auto">
               <div className="border border-border-subtle bg-surface p-6 flex flex-col justify-between relative group hover:border-tertiary transition-colors">
@@ -213,7 +240,7 @@ export default function AcknowledgmentsPage() {
               <h2 className="font-headline-md text-3xl md:text-headline-md text-on-surface">Experience</h2>
               <div className="w-8 h-px bg-tertiary mt-4 md:mt-6"></div>
               <p className="font-body text-body text-text-secondary mt-6 md:mt-8 max-w-sm text-sm md:text-base leading-relaxed">
-                Career history spanning luxury hospitality operations in London to high-scale commercial video direction and digital brand architecture in India.
+                Career history spanning events and line production in London to high-scale commercial video direction and digital brand architecture in India.
               </p>
             </div>
 
